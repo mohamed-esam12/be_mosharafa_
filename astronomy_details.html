@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Mosharafa | Astronomy Field Details</title>
+    <link rel="icon" type="image/png" href="be_mosharafa.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cairo:wght@400;600;700&family=Rakkas&display=swap" rel="stylesheet">
+    
+    <style>
+        /* BASE STYLES */
+        body { font-family: 'Inter', sans-serif; }
+        .font-arabic { font-family: 'Cairo', sans-serif; }
+        .logo-arabic-font { font-family: 'Rakkas', cursive; }
+        
+        /* New page specific styling (Consistent with Physics Page) */
+        .detail-card {
+            border-left: 4px solid #1f2937; /* Gray-800 for contrast */
+            transition: box-shadow 0.3s ease;
+        }
+        .rtl .detail-card {
+            border-left: none;
+            border-right: 4px solid #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <nav id="navbar" class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="be_mosharafa.png" alt="Be Mosharafa Logo" class="h-10 w-auto me-2">
+                    <span id="brand-name" class="font-bold text-xl tracking-tight text-gray-900">Be Mosharafa</span>
+                </div>
+                <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                    <button onclick="toggleLanguage()" class="flex items-center text-gray-600 hover:text-black border border-gray-300 px-3 py-1 rounded-md text-sm transition hover:bg-gray-100">
+                        <i class="fa-solid fa-globe me-2 text-gray-500"></i>
+                        <span id="lang-text" class="font-medium">العربية</span>
+                    </button>
+                    <button onclick="goToHome()" id="back-btn-nav" class="bg-black text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition duration-200 shadow-md">Back to Fields</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-24 pb-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="text-center mb-12">
+                <h1 id="main-title" class="text-5xl font-extrabold text-gray-900 mt-4 leading-tight">Astronomy</h1>
+                <p id="page-subtitle" class="mt-2 text-xl text-gray-600">Astronomy&Space Science Field Details</p>
+                <div class="inline-block mt-4 text-gray-500">
+                    <i class="fa-solid fa-galaxy text-5xl opacity-80"></i>
+                </div>
+            </header>
+
+            <div class="bg-white p-8 rounded-xl shadow-xl mb-16">
+                <h2 id="summary-heading" class="text-3xl font-bold text-gray-800 border-b border-gray-300 pb-3 mb-4">Field Summary</h2>
+                <p id="field-summary" class="text-lg text-gray-700 leading-relaxed">
+                    Astronomy is the oldest and broadest natural science, focusing on **celestial objects, space, and the universe as a whole**. It uses physics and mathematics to study the formation, evolution, and properties of everything outside Earth's atmosphere, including planets, stars, galaxies, and cosmic background radiation. It is fundamentally concerned with understanding the cosmos's origin and ultimate fate.
+                </p>
+            </div>
+            
+            <h2 id="subfields-heading" class="text-3xl font-bold text-gray-800 border-b-2 border-gray-300 pb-3 mb-6">Key Sub-Fields</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="subfields-grid">
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-1-title" class="text-2xl font-semibold text-gray-900">Theoretical Astrophysics</h3>
+                    <p id="subfield-1-summary" class="mt-2 text-gray-600">
+                        Applies physical laws to model and explain astronomical phenomena that cannot be observed directly. It addresses complex systems like **black hole formation**, the structure of galaxies, and the physics of the **Early Universe**, often using **General Relativity** to describe gravitational dynamics on a cosmic scale.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-2-title" class="text-2xl font-semibold text-gray-900">Observational Astronomy</h3>
+                    <p id="subfield-2-summary" class="mt-2 text-gray-600">
+                        Focuses on **gathering data** using telescopes and instruments across the electromagnetic spectrum (radio, optical, infrared, X-ray). This branch confirms theoretical predictions, discovers new celestial bodies, and charts the physical characteristics of stars and nebulae.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-3-title" class="text-2xl font-semibold text-gray-900">Solar Physics</h3>
+                    <p id="subfield-3-summary" class="mt-2 text-gray-600">
+                        Dedicated to the detailed study of our closest star, the **Sun**. It investigates its internal structure, atmospheric dynamics, magnetic fields, solar flares, and coronal mass ejections. This research is vital for understanding space weather and its effects on Earth.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-4-title" class="text-2xl font-semibold text-gray-900">Spherical Astronomy</h3>
+                    <p id="subfield-4-summary" class="mt-2 text-gray-600">
+                        A branch of positional astronomy focusing on **locating celestial objects on the celestial sphere**. It deals with the coordinates, time systems, and motions (precession, nutation) necessary for accurate navigation and tracking of stars and satellites.
+                    </p>
+                </div>
+                
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-5-title" class="text-2xl font-semibold text-gray-900">Celestial Mechanics</h3>
+                    <p id="subfield-5-summary" class="mt-2 text-gray-600">
+                        Applies the laws of **Classical Mechanics** (Newton's laws of motion and gravity) to describe the motions of astronomical objects, such as the orbits of planets, moons, comets, and binary star systems.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-6-title" class="text-2xl font-semibold text-gray-900">Space Dynamics</h3>
+                    <p id="subfield-6-summary" class="mt-2 text-gray-600">
+                        A discipline closely related to Celestial Mechanics, but focused specifically on the **trajectory, navigation, and control of artificial satellites and spacecraft**. It utilizes orbital mechanics for mission planning and execution.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-7-title" class="text-2xl font-semibold text-gray-900">Planetary Science</h3>
+                    <p id="subfield-7-summary" class="mt-2 text-gray-600">
+                        An interdisciplinary field studying **planets, moons, and planetary systems**, including their formation, internal structure, atmosphere, and geological evolution. It combines aspects of astronomy, geology, atmospheric science, and biology.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-8-title" class="text-2xl font-semibold text-gray-900">Cosmology</h3>
+                    <p id="subfield-8-summary" class="mt-2 text-gray-600">
+                        The scientific study of the **Universe as a single entity**, including its **origin (Big Bang), large-scale structure, dynamics, and ultimate fate**. It heavily relies on **General Relativity** to model the geometry and evolution of spacetime itself.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-9-title" class="text-2xl font-semibold text-gray-900">Astrobiology</h3>
+                    <p id="subfield-9-summary" class="mt-2 text-gray-600">
+                        The interdisciplinary search for **life beyond Earth**. It investigates the origins of life, the evolution and distribution of life in the universe, and the conditions necessary for habitability on other worlds.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button onclick="goToHome()" id="back-btn-bottom" class="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition duration-200 shadow-md">Back to Home Page</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xl font-bold mb-4 logo-arabic-font">Be Mosharafa</h3>
+            <p class="text-sm text-gray-400">Astronomy Exploration Page. &copy; 2025 Be Mosharafa.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Translation Data for Astronomy Page ---
+        const translations = {
+            en: {
+                title: "Be Mosharafa | Astronomy Field Details",
+                main_title: "Astronomy",
+                subtitle: "Astronomy&Space Science Field Details",
+                back_btn: "Back to Home Page",
+                summary_heading: "Field Summary",
+                
+                field_summary: "Astronomy is the oldest and broadest natural science, focusing on celestial objects, space, and the universe as a whole. It uses physics and mathematics to study the formation, evolution, and properties of everything outside Earth's atmosphere, including planets, stars, galaxies, and cosmic background radiation. It is fundamentally concerned with understanding the cosmos's origin and ultimate fate.",
+                
+                subfields_heading: "Key Sub-Fields",
+
+                subfield_1_title: "Theoretical Astrophysics",
+                subfield_1_summary: "Applies physical laws to model and explain astronomical phenomena that cannot be observed directly. It addresses complex systems like black hole formation, the structure of galaxies, and the physics of the Early Universe, often using General Relativity to describe gravitational dynamics on a cosmic scale.",
+                
+                subfield_2_title: "Observational Astronomy",
+                subfield_2_summary: "Focuses on gathering data using telescopes and instruments across the electromagnetic spectrum (radio, optical, infrared, X-ray). This branch confirms theoretical predictions, discovers new celestial bodies, and charts the physical characteristics of stars and nebulae.",
+                
+                subfield_3_title: "Solar Physics",
+                subfield_3_summary: "Dedicated to the detailed study of our closest star, the Sun. It investigates its internal structure, atmospheric dynamics, magnetic fields, solar flares, and coronal mass ejections. This research is vital for understanding space weather and its effects on Earth.",
+
+                subfield_4_title: "Spherical Astronomy",
+                subfield_4_summary: "A branch of positional astronomy focusing on locating celestial objects on the celestial sphere. It deals with the coordinates, time systems, and motions (precession, nutation) necessary for accurate navigation and tracking of stars and satellites.",
+                
+                subfield_5_title: "Celestial Mechanics",
+                subfield_5_summary: "Applies the laws of Classical Mechanics (Newton's laws of motion and gravity) to describe the motions of astronomical objects, such as the orbits of planets, moons, comets, and binary star systems.",
+
+                subfield_6_title: "Space Dynamics",
+                subfield_6_summary: "A discipline closely related to Celestial Mechanics, but focused specifically on the trajectory, navigation, and control of artificial satellites and spacecraft. It utilizes orbital mechanics for mission planning and execution.",
+
+                subfield_7_title: "Planetary Science",
+                subfield_7_summary: "An interdisciplinary field studying planets, moons, and planetary systems, including their formation, internal structure, atmosphere, and geological evolution. It combines aspects of astronomy, geology, atmospheric science, and biology.",
+
+                subfield_8_title: "Cosmology",
+                subfield_8_summary: "The scientific study of the Universe as a single entity, including its origin (Big Bang), large-scale structure, dynamics, and ultimate fate. It heavily relies on General Relativity to model the geometry and evolution of spacetime itself.",
+
+                subfield_9_title: "Astrobiology",
+                subfield_9_summary: "The interdisciplinary search for life beyond Earth. It investigates the origins of life, the evolution and distribution of life in the universe, and the conditions necessary for habitability on other worlds.",
+
+                lang_text: "العربية"
+            },
+            ar: {
+                title: "كُن مُشرفة | تفاصيل تخصص الفلك",
+                main_title: "الفلك",
+                subtitle: "تفاصيل مجال الفلك و علوم الفضاء",
+                back_btn: "العودة إلى الصفحة الرئيسية",
+                summary_heading: "ملخص التخصص",
+                
+                field_summary: "علم الفلك هو أقدم وأوسع العلوم الطبيعية، ويركز على الأجرام السماوية، والفضاء، والكون ككل. يستخدم الفيزياء والرياضيات لدراسة تكوين وتطور وخصائص كل شيء خارج الغلاف الجوي للأرض، بما في ذلك الكواكب والنجوم والمجرات والإشعاع الخلفي الكوني. وهو معني بشكل أساسي بفهم أصل الكون ومصيره النهائي.",
+                
+                subfields_heading: "التخصصات الفرعية الرئيسية",
+
+                subfield_1_title: "الفيزياء الفلكية النظرية",
+                subfield_1_summary: "تطبق القوانين الفيزيائية لنمذجة وشرح الظواهر الفلكية التي لا يمكن ملاحظتها مباشرة. تتناول أنظمة معقدة مثل تكوين الثقوب السوداء، وبنية المجرات، وفيزياء الكون المبكر، وغالباً ما تستخدم النسبية العامة لوصف ديناميكيات الجاذبية على المستوى الكوني.",
+                
+                subfield_2_title: "علم الفلك الرصدي",
+                subfield_2_summary: "يركز على جمع البيانات باستخدام التلسكوبات والأجهزة عبر الطيف الكهرومغناطيسي (الراديو، البصري، الأشعة تحت الحمراء، الأشعة السينية). يؤكد هذا الفرع التنبؤات النظرية ويكتشف أجرام سماوية جديدة ويرسم الخصائص الفيزيائية للنجوم والسدم.",
+                
+                subfield_3_title: "الفيزياء الشمسية",
+                subfield_3_summary: "مخصصة للدراسة التفصيلية لأقرب نجم إلينا، الشمس. تستقصي بنيتها الداخلية وديناميكيات الغلاف الجوي ومجالاتها المغناطيسية والانفجارات الشمسية وانبعاثات الكتلة الإكليلية. هذا البحث حيوي لفهم طقس الفضاء وتأثيراته على الأرض.",
+
+                subfield_4_title: "علم الفلك الكروي",
+                subfield_4_summary: "فرع من علم الفلك الموضعي يركز على تحديد موقع الأجرام السماوية على الكرة السماوية. يتعامل مع الإحداثيات وأنظمة الوقت والحركات (المبادرة والترنح) اللازمة للملاحة الدقيقة وتتبع النجوم والأقمار الصناعية.",
+                
+                subfield_5_title: "الميكانيكا السماوية",
+                subfield_5_summary: "تطبق قوانين الميكانيكا الكلاسيكية (قوانين نيوتن للحركة والجاذبية) لوصف حركات الأجرام الفلكية، مثل مدارات الكواكب والأقمار والمذنبات وأنظمة النجوم الثنائية.",
+
+                subfield_6_title: "ديناميكيات الفضاء",
+                subfield_6_summary: "تخصص وثيق الصلة بالميكانيكا السماوية، ولكنه يركز بشكل خاص على المسار والملاحة والتحكم في الأقمار الصناعية والمركبات الفضائية الاصطناعية. يستخدم ميكانيكا المدارات لتخطيط البعثات وتنفيذها.",
+
+                subfield_7_title: "علم الكواكب",
+                subfield_7_summary: "مجال متعدد التخصصات يدرس الكواكب والأقمار والأنظمة الكوكبية، بما في ذلك تكوينها وبنيتها الداخلية وغلافها الجوي وتطورها الجيولوجي. يجمع بين جوانب من علم الفلك والجيولوجيا وعلوم الغلاف الجوي والبيولوجيا.",
+
+                subfield_8_title: "علم الكون",
+                subfield_8_summary: "الدراسة العلمية للكون ككيان واحد، بما في ذلك أصله (الانفجار العظيم)، وبنيته على نطاق واسع، وديناميكياته، ومصيره النهائي. يعتمد بشكل كبير على النسبية العامة لنمذجة هندسة الزمكان وتطوره.",
+
+                subfield_9_title: "علم الأحياء الفلكي",
+                subfield_9_summary: "البحث متعدد التخصصات عن الحياة خارج الأرض. يستقصي أصول الحياة وتطور وتوزيع الحياة في الكون والظروف اللازمة للعيش على عوالم أخرى.",
+
+                lang_text: "English"
+            }
+        };
+
+        let currentLang = 'en';
+
+        // --- Core Functions ---
+        // This function explicitly sends the user back to the assumed home file (index.html)
+        function goToHome() {
+            // NOTE: Replace 'index.html' with the actual filename of your main home page if it is different.
+            window.location.href = 'be_mosharafa.html'; 
+        }
+
+        // Initialize language settings on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Default to English. Use logic to set Arabic if needed.
+            currentLang = 'en';
+            applyTranslations('en');
+        });
+
+        function applyTranslations(lang) {
+            const data = translations[lang];
+            const htmlTag = document.documentElement;
+            const body = document.body;
+
+            // Set global direction and font
+            htmlTag.lang = lang;
+            htmlTag.dir = (lang === 'ar' ? 'rtl' : 'ltr');
+            
+            if (lang === 'ar') {
+                body.classList.add('font-arabic');
+                body.classList.add('rtl');
+            } else {
+                body.classList.remove('font-arabic');
+                body.classList.remove('rtl');
+            }
+            
+            // Apply text translations
+            document.title = data.title;
+            document.getElementById('lang-text').textContent = data.lang_text;
+            
+            // Apply text to the two back buttons
+            document.getElementById('back-btn-nav').textContent = data.back_btn;
+            document.getElementById('back-btn-bottom').textContent = data.back_btn;
+
+            document.getElementById('main-title').textContent = data.main_title;
+            document.getElementById('page-subtitle').textContent = data.subtitle;
+            document.getElementById('summary-heading').textContent = data.summary_heading;
+            document.getElementById('field-summary').textContent = data.field_summary;
+            document.getElementById('subfields-heading').textContent = data.subfields_heading;
+
+            // Sub-field translations (9 fields)
+            document.getElementById('subfield-1-title').textContent = data.subfield_1_title;
+            document.getElementById('subfield-1-summary').textContent = data.subfield_1_summary;
+            document.getElementById('subfield-2-title').textContent = data.subfield_2_title;
+            document.getElementById('subfield-2-summary').textContent = data.subfield_2_summary;
+            document.getElementById('subfield-3-title').textContent = data.subfield_3_title;
+            document.getElementById('subfield-3-summary').textContent = data.subfield_3_summary;
+            document.getElementById('subfield-4-title').textContent = data.subfield_4_title;
+            document.getElementById('subfield-4-summary').textContent = data.subfield_4_summary;
+            document.getElementById('subfield-5-title').textContent = data.subfield_5_title;
+            document.getElementById('subfield-5-summary').textContent = data.subfield_5_summary;
+            document.getElementById('subfield-6-title').textContent = data.subfield_6_title;
+            document.getElementById('subfield-6-summary').textContent = data.subfield_6_summary;
+            document.getElementById('subfield-7-title').textContent = data.subfield_7_title;
+            document.getElementById('subfield-7-summary').textContent = data.subfield_7_summary;
+            document.getElementById('subfield-8-title').textContent = data.subfield_8_title;
+            document.getElementById('subfield-8-summary').textContent = data.subfield_8_summary;
+            document.getElementById('subfield-9-title').textContent = data.subfield_9_title;
+            document.getElementById('subfield-9-summary').textContent = data.subfield_9_summary;
+            
+            currentLang = lang;
+        }
+
+        function toggleLanguage() {
+            const newLang = (currentLang === 'en' ? 'ar' : 'en');
+            applyTranslations(newLang);
+        }
+    </script>
+</body>
+</html>

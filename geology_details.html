@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Mosharafa | Geology Field Details</title>
+    <link rel="icon" type="image/png" href="be_mosharafa.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cairo:wght@400;600;700&family=Rakkas&display=swap" rel="stylesheet">
+    
+    <style>
+        /* BASE STYLES */
+        body { font-family: 'Inter', sans-serif; }
+        .font-arabic { font-family: 'Cairo', sans-serif; }
+        .logo-arabic-font { font-family: 'Rakkas', cursive; }
+        
+        /* New page specific styling (Consistent with previous pages) */
+        .detail-card {
+            border-left: 4px solid #1f2937; /* Gray-800 for contrast */
+            transition: box-shadow 0.3s ease;
+        }
+        .rtl .detail-card {
+            border-left: none;
+            border-right: 4px solid #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <nav id="navbar" class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="be_mosharafa.png" alt="Be Mosharafa Logo" class="h-10 w-auto me-2">
+                    <span id="brand-name" class="font-bold text-xl tracking-tight text-gray-900">Be Mosharafa</span>
+                </div>
+                <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                    <button onclick="toggleLanguage()" class="flex items-center text-gray-600 hover:text-black border border-gray-300 px-3 py-1 rounded-md text-sm transition hover:bg-gray-100">
+                        <i class="fa-solid fa-globe me-2 text-gray-500"></i>
+                        <span id="lang-text" class="font-medium">العربية</span>
+                    </button>
+                    <button onclick="goToHome()" id="back-btn-nav" class="bg-black text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition duration-200 shadow-md">Back to Fields</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-24 pb-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="text-center mb-12">
+                <h1 id="main-title" class="text-5xl font-extrabold text-gray-900 mt-4 leading-tight">Geology</h1>
+                <p id="page-subtitle" class="mt-2 text-xl text-gray-600">Earth Science Field Details</p>
+                <div class="inline-block mt-4 text-gray-500">
+                    <i class="fa-solid fa-mountain text-5xl opacity-80"></i>
+                </div>
+            </header>
+
+            <div class="bg-white p-8 rounded-xl shadow-xl mb-16">
+                <h2 id="summary-heading" class="text-3xl font-bold text-gray-800 border-b border-gray-300 pb-3 mb-4">Field Summary</h2>
+                <p id="field-summary" class="text-lg text-gray-700 leading-relaxed">
+                    Geology is the **study of the Earth**, its structure, materials (minerals and rocks), and the processes that have shaped it over geological time. Geologists investigate phenomena from plate tectonics and volcanic activity to the formation of mountains and the distribution of natural resources. Geology provides critical insights into the Earth's past history, including climate change, and guides the sustainable extraction of water and energy resources.
+                </p>
+            </div>
+            
+            <h2 id="subfields-heading" class="text-3xl font-bold text-gray-800 border-b-2 border-gray-300 pb-3 mb-6">Key Sub-Fields</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="subfields-grid">
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-1-title" class="text-2xl font-semibold text-gray-900">Mineralogy</h3>
+                    <p id="subfield-1-summary" class="mt-2 text-gray-600">
+                        The scientific study of **minerals**, including their crystal structure, chemical composition, and physical properties. This knowledge is essential because minerals are the basic building blocks of rocks and are the sources of metals and many industrial materials.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-2-title" class="text-2xl font-semibold text-gray-900">Petrology</h3>
+                    <p id="subfield-2-summary" class="mt-2 text-gray-600">
+                        The study of **rocks**—igneous, metamorphic, and sedimentary—including their origin, composition, texture, and structure. Petrologists use this information to understand the processes occurring within the Earth's crust and mantle.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-3-title" class="text-2xl font-semibold text-gray-900">Structural Geology</h3>
+                    <p id="subfield-3-summary" class="mt-2 text-gray-600">
+                        Investigates the **three-dimensional geometry and deformation** of rock masses. It studies folds, faults, and other features resulting from tectonic forces, which is key to finding oil, gas, and understanding earthquake hazards.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-4-title" class="text-2xl font-semibold text-gray-900">Stratigraphy</h3>
+                    <p id="subfield-4-summary" class="mt-2 text-gray-600">
+                        Deals with the **succession and age of rock layers (strata)**. By analyzing the vertical layering of rocks, stratigraphers establish geological timelines and correlate rock units across vast distances, crucial for petroleum exploration.
+                    </p>
+                </div>
+                
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-5-title" class="text-2xl font-semibold text-gray-900">Sedimentology</h3>
+                    <p id="subfield-5-summary" class="mt-2 text-gray-600">
+                        The study of **sediments and the processes of deposition** that lead to the formation of sedimentary rocks. It examines how erosion, transport, and settling create formations that often host groundwater, oil, and gas.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-6-title" class="text-2xl font-semibold text-gray-900">Paleontology</h3>
+                    <p id="subfield-6-summary" class="mt-2 text-gray-600">
+                        The scientific study of **ancient life** based on **fossil evidence**. Paleontologists use fossils to reconstruct evolutionary history, understand ancient environments, and determine the age of the rocks in which the fossils are found.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-7-title" class="text-2xl font-semibold text-gray-900">Economic Geology</h3>
+                    <p id="subfield-7-summary" class="mt-2 text-gray-600">
+                        Focuses on Earth materials that can be used for **economic or industrial purposes**, such as metal ores, non-metallic minerals, building materials, petroleum, coal, and geothermal energy sources. This field drives exploration and mining efforts.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-8-title" class="text-2xl font-semibold text-gray-900">Engineering Geology</h3>
+                    <p id="subfield-8-summary" class="mt-2 text-gray-600">
+                        The application of geological principles to **engineering practice**. It investigates the geological factors affecting the planning, design, construction, operation, and maintenance of structures like dams, bridges, tunnels, and skyscrapers.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button onclick="goToHome()" id="back-btn-bottom" class="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition duration-200 shadow-md">Back to Home Page</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xl font-bold mb-4 logo-arabic-font">Be Mosharafa</h3>
+            <p class="text-sm text-gray-400">Geology Exploration Page. &copy; 2025 Be Mosharafa.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Translation Data for Geology Page ---
+        const translations = {
+            en: {
+                title: "Be Mosharafa | Geology Field Details",
+                main_title: "Geology",
+                subtitle: "Earth Science Field Details",
+                back_btn: "Back to Home Page",
+                summary_heading: "Field Summary",
+                
+                field_summary: "Geology is the study of the Earth, its structure, materials (minerals and rocks), and the processes that have shaped it over geological time. Geologists investigate phenomena from plate tectonics and volcanic activity to the formation of mountains and the distribution of natural resources. Geology provides critical insights into the Earth's past history, including climate change, and guides the sustainable extraction of water and energy resources.",
+                
+                subfields_heading: "Key Sub-Fields",
+
+                subfield_1_title: "Mineralogy",
+                subfield_1_summary: "The scientific study of minerals, including their crystal structure, chemical composition, and physical properties. This knowledge is essential because minerals are the basic building blocks of rocks and are the sources of metals and many industrial materials.",
+                
+                subfield_2_title: "Petrology",
+                subfield_2_summary: "The study of rocks—igneous, metamorphic, and sedimentary—including their origin, composition, texture, and structure. Petrologists use this information to understand the processes occurring within the Earth's crust and mantle.",
+                
+                subfield_3_title: "Structural Geology",
+                subfield_3_summary: "Investigates the three-dimensional geometry and deformation of rock masses. It studies folds, faults, and other features resulting from tectonic forces, which is key to finding oil, gas, and understanding earthquake hazards.",
+
+                subfield_4_title: "Stratigraphy",
+                subfield_4_summary: "Deals with the succession and age of rock layers (strata). By analyzing the vertical layering of rocks, stratigraphers establish geological timelines and correlate rock units across vast distances, crucial for petroleum exploration.",
+                
+                subfield_5_title: "Sedimentology",
+                subfield_5_summary: "The study of sediments and the processes of deposition that lead to the formation of sedimentary rocks. It examines how erosion, transport, and settling create formations that often host groundwater, oil, and gas.",
+
+                subfield_6_title: "Paleontology",
+                subfield_6_summary: "The scientific study of ancient life based on fossil evidence. Paleontologists use fossils to reconstruct evolutionary history, understand ancient environments, and determine the age of the rocks in which the fossils are found.",
+
+                subfield_7_title: "Economic Geology",
+                subfield_7_summary: "Focuses on Earth materials that can be used for economic or industrial purposes, such as metal ores, non-metallic minerals, building materials, petroleum, coal, and geothermal energy sources. This field drives exploration and mining efforts.",
+
+                subfield_8_title: "Engineering Geology",
+                subfield_8_summary: "The application of geological principles to engineering practice. It investigates the geological factors affecting the planning, design, construction, operation, and maintenance of structures like dams, bridges, tunnels, and skyscrapers.",
+
+                lang_text: "العربية"
+            },
+            ar: {
+                title: "كُن مُشرفة | تفاصيل تخصص الجيولوجيا",
+                main_title: "الجيولوجيا",
+                subtitle: "تفاصيل مجال علوم الأرض",
+                back_btn: "العودة إلى الصفحة الرئيسية",
+                summary_heading: "ملخص التخصص",
+                
+                field_summary: "الجيولوجيا هي دراسة الأرض، وتركيبها، وموادها (المعادن والصخور)، والعمليات التي شكلتها على مدى الزمن الجيولوجي. يحقق الجيولوجيون في ظواهر تتراوح بين تكتونية الصفائح والنشاط البركاني إلى تكوين الجبال وتوزيع الموارد الطبيعية. توفر الجيولوجيا رؤى حاسمة في تاريخ الأرض الماضي، بما في ذلك تغير المناخ، وتوجه عملية الاستخراج المستدام لموارد المياه والطاقة.",
+                
+                subfields_heading: "التخصصات الفرعية الرئيسية",
+
+                subfield_1_title: "علم المعادن",
+                subfield_1_summary: "الدراسة العلمية للمعادن، بما في ذلك تركيبها البلوري، وتركيبها الكيميائي، وخصائصها الفيزيائية. هذه المعرفة ضرورية لأن المعادن هي اللبنات الأساسية للصخور وهي مصادر للمعادن والعديد من المواد الصناعية.",
+                
+                subfield_2_title: "علم الصخور",
+                subfield_2_summary: "دراسة الصخور - النارية والمتحولة والرسوبية - بما في ذلك أصلها وتركيبها وقوامها وبنيتها. يستخدم علماء الصخور هذه المعلومات لفهم العمليات التي تحدث داخل قشرة الأرض وغطائها.",
+                
+                subfield_3_title: "الجيولوجيا التركيبية",
+                subfield_3_summary: "تستقصي الهندسة ثلاثية الأبعاد وتشوه الكتل الصخرية. تدرس الطيات والصدوع والملامح الأخرى الناتجة عن القوى التكتونية، وهو مفتاح للعثور على النفط والغاز وفهم مخاطر الزلازل.",
+
+                subfield_4_title: "علم الطبقات",
+                subfield_4_summary: "يتعامل مع تتابع وعمر الطبقات الصخرية (الطبقات). من خلال تحليل الطبقات الرأسية للصخور، ينشئ علماء الطبقات الجداول الزمنية الجيولوجية ويربطون الوحدات الصخرية عبر مسافات شاسعة، وهو أمر حاسم لاستكشاف النفط.",
+                
+                subfield_5_title: "علم الرسوبيات",
+                subfield_5_summary: "دراسة الرواسب وعمليات الترسيب التي تؤدي إلى تكوين الصخور الرسوبية. يفحص كيفية قيام التعرية والنقل والترسيب بإنشاء تشكيلات غالباً ما تستضيف المياه الجوفية والنفط والغاز.",
+
+                subfield_6_title: "علم الأحافير",
+                subfield_6_summary: "الدراسة العلمية للحياة القديمة بناءً على أدلة الحفريات. يستخدم علماء الأحافير الحفريات لإعادة بناء التاريخ التطوري، وفهم البيئات القديمة، وتحديد عمر الصخور التي وجدت فيها الحفريات.",
+
+                subfield_7_title: "الجيولوجيا الاقتصادية",
+                subfield_7_summary: "تركز على مواد الأرض التي يمكن استخدامها لأغراض اقتصادية أو صناعية، مثل خامات المعادن والمعادن غير المعدنية ومواد البناء والبترول والفحم ومصادر الطاقة الحرارية الأرضية. يقود هذا المجال جهود الاستكشاف والتعدين.",
+
+                subfield_8_title: "الجيولوجيا الهندسية",
+                subfield_8_summary: "تطبيق المبادئ الجيولوجية على الممارسة الهندسية. تحقق في العوامل الجيولوجية التي تؤثر على تخطيط وتصميم وبناء وتشغيل وصيانة المنشآت مثل السدود والجسور والأنفاق وناطحات السحاب.",
+
+                lang_text: "English"
+            }
+        };
+
+        let currentLang = 'en';
+
+        // --- Core Functions ---
+        // This function explicitly sends the user back to the assumed home file (index.html)
+        function goToHome() {
+            // NOTE: Replace 'index.html' with the actual filename of your main home page if it is different.
+            window.location.href = 'be_mosharafa.html'; 
+        }
+
+        // Initialize language settings on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            currentLang = 'en';
+            applyTranslations('en');
+        });
+
+        function applyTranslations(lang) {
+            const data = translations[lang];
+            const htmlTag = document.documentElement;
+            const body = document.body;
+
+            // Set global direction and font
+            htmlTag.lang = lang;
+            htmlTag.dir = (lang === 'ar' ? 'rtl' : 'ltr');
+            
+            if (lang === 'ar') {
+                body.classList.add('font-arabic');
+                body.classList.add('rtl');
+            } else {
+                body.classList.remove('font-arabic');
+                body.classList.remove('rtl');
+            }
+            
+            // Apply text translations
+            document.title = data.title;
+            document.getElementById('lang-text').textContent = data.lang_text;
+            
+            // Apply text to the two back buttons
+            document.getElementById('back-btn-nav').textContent = data.back_btn;
+            document.getElementById('back-btn-bottom').textContent = data.back_btn;
+
+            document.getElementById('main-title').textContent = data.main_title;
+            document.getElementById('page-subtitle').textContent = data.subtitle;
+            document.getElementById('summary-heading').textContent = data.summary_heading;
+            document.getElementById('field-summary').textContent = data.field_summary;
+            document.getElementById('subfields-heading').textContent = data.subfields_heading;
+
+            // Sub-field translations (8 fields)
+            document.getElementById('subfield-1-title').textContent = data.subfield_1_title;
+            document.getElementById('subfield-1-summary').textContent = data.subfield_1_summary;
+            document.getElementById('subfield-2-title').textContent = data.subfield_2_title;
+            document.getElementById('subfield-2-summary').textContent = data.subfield_2_summary;
+            document.getElementById('subfield-3-title').textContent = data.subfield_3_title;
+            document.getElementById('subfield-3-summary').textContent = data.subfield_3_summary;
+            document.getElementById('subfield-4-title').textContent = data.subfield_4_title;
+            document.getElementById('subfield-4-summary').textContent = data.subfield_4_summary;
+            document.getElementById('subfield-5-title').textContent = data.subfield_5_title;
+            document.getElementById('subfield-5-summary').textContent = data.subfield_5_summary;
+            document.getElementById('subfield-6-title').textContent = data.subfield_6_title;
+            document.getElementById('subfield-6-summary').textContent = data.subfield_6_summary;
+            document.getElementById('subfield-7-title').textContent = data.subfield_7_title;
+            document.getElementById('subfield-7-summary').textContent = data.subfield_7_summary;
+            document.getElementById('subfield-8-title').textContent = data.subfield_8_title;
+            document.getElementById('subfield-8-summary').textContent = data.subfield_8_summary;
+            
+            currentLang = lang;
+        }
+
+        function toggleLanguage() {
+            const newLang = (currentLang === 'en' ? 'ar' : 'en');
+            applyTranslations(newLang);
+        }
+    </script>
+</body>
+</html>

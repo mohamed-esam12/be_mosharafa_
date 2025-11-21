@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Mosharafa | Computer Science Field Details</title>
+    <link rel="icon" type="image/png" href="be_mosharafa.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cairo:wght@400;600;700&family=Rakkas&display=swap" rel="stylesheet">
+    
+    <style>
+        /* BASE STYLES */
+        body { font-family: 'Inter', sans-serif; }
+        .font-arabic { font-family: 'Cairo', sans-serif; }
+        .logo-arabic-font { font-family: 'Rakkas', cursive; }
+        
+        /* New page specific styling (Consistent with previous pages) */
+        .detail-card {
+            border-left: 4px solid #1f2937; /* Gray-800 for contrast */
+            transition: box-shadow 0.3s ease;
+        }
+        .rtl .detail-card {
+            border-left: none;
+            border-right: 4px solid #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <nav id="navbar" class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="be_mosharafa.png" alt="Be Mosharafa Logo" class="h-10 w-auto me-2">
+                    <span id="brand-name" class="font-bold text-xl tracking-tight text-gray-900">Be Mosharafa</span>
+                </div>
+                <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                    <button onclick="toggleLanguage()" class="flex items-center text-gray-600 hover:text-black border border-gray-300 px-3 py-1 rounded-md text-sm transition hover:bg-gray-100">
+                        <i class="fa-solid fa-globe me-2 text-gray-500"></i>
+                        <span id="lang-text" class="font-medium">العربية</span>
+                    </button>
+                    <button onclick="goToHome()" id="back-btn-nav" class="bg-black text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition duration-200 shadow-md">Back to Fields</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-24 pb-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="text-center mb-12">
+                <h1 id="main-title" class="text-5xl font-extrabold text-gray-900 mt-4 leading-tight">Computer Science</h1>
+                <p id="page-subtitle" class="mt-2 text-xl text-gray-600">Formal Science and Technology Field Details</p>
+                <div class="inline-block mt-4 text-gray-500">
+                    <i class="fa-solid fa-laptop-code text-5xl opacity-80"></i>
+                </div>
+            </header>
+
+            <div class="bg-white p-8 rounded-xl shadow-xl mb-16">
+                <h2 id="summary-heading" class="text-3xl font-bold text-gray-800 border-b border-gray-300 pb-3 mb-4">Field Summary</h2>
+                <p id="field-summary" class="text-lg text-gray-700 leading-relaxed">
+                    Computer Science is the **study of computation, information, and automation**. It covers the theoretical foundations of information and computation, along with practical techniques for the implementation and application of computing systems. This discipline drives the digital world, focusing on designing efficient algorithms, developing intelligent software, and engineering robust hardware and networking infrastructure.
+                </p>
+            </div>
+            
+            <h2 id="subfields-heading" class="text-3xl font-bold text-gray-800 border-b-2 border-gray-300 pb-3 mb-6">Key Sub-Fields</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="subfields-grid">
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-1-title" class="text-2xl font-semibold text-gray-900">Theoretical Computer Science</h3>
+                    <p id="subfield-1-summary" class="mt-2 text-gray-600">
+                        Focuses on the abstract and mathematical foundations of computing. Key areas include **computability theory** (what can be computed), **complexity theory** (how fast problems can be solved), and formal logic, setting the ultimate limits of computer power.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-2-title" class="text-2xl font-semibold text-gray-900">Algorithms and Data Structures</h3>
+                    <p id="subfield-2-summary" class="mt-2 text-gray-600">
+                        Algorithms define the step-by-step procedures to solve specific problems, while data structures define how data is organized and stored efficiently (e.g., arrays, trees, graphs). Mastering this is central to writing high-performance, scalable code.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-3-title" class="text-2xl font-semibold text-gray-900">Programming Languages</h3>
+                    <p id="subfield-3-summary" class="mt-2 text-gray-600">
+                        The study of the design, implementation, analysis, and characteristics of programming languages. It examines language syntax, semantics, type theory, and paradigms (object-oriented, functional), focusing on how humans write instructions for machines.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-4-title" class="text-2xl font-semibold text-gray-900">Computer Architecture</h3>
+                    <p id="subfield-4-summary" class="mt-2 text-gray-600">
+                        Concerns the conceptual design and fundamental operational structure of a computer system. This includes the design of the **CPU, memory hierarchy, and input/output components**, aiming to maximize processing speed and efficiency.
+                    </p>
+                </div>
+                
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-5-title" class="text-2xl font-semibold text-gray-900">Artificial Intelligence (AI)</h3>
+                    <p id="subfield-5-summary" class="mt-2 text-gray-600">
+                        The development of computer systems capable of performing tasks that typically require human intelligence, such as visual perception, speech recognition, decision-making, and natural language translation. **Machine Learning** is a primary sub-area of AI.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-6-title" class="text-2xl font-semibold text-gray-900">Software Engineering</h3>
+                    <p id="subfield-6-summary" class="mt-2 text-gray-600">
+                        A disciplined, systematic approach to the **design, development, and maintenance of software systems**. It focuses on methodologies (like Agile), quality control, testing, and managing complex projects to ensure software is reliable and delivered efficiently.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-7-title" class="text-2xl font-semibold text-gray-900">Computer Networks and Security</h3>
+                    <p id="subfield-7-summary" class="mt-2 text-gray-600">
+                        Studies the protocols and architecture used for communication between computers (e.g., the Internet, Wi-Fi). **Security** focuses on protecting computer systems and data from unauthorized access, use, disclosure, disruption, modification, or destruction.
+                    </p>
+                </div>
+                
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-8-title" class="text-2xl font-semibold text-gray-900">Quantum Computing</h3>
+                    <p id="subfield-8-summary" class="mt-2 text-gray-600">
+                        A cutting-edge field focused on developing **quantum computers** based on quantum mechanics principles (superposition and entanglement). It explores algorithms (like Shor's and Grover's) capable of solving problems currently intractable for classical computers, especially in cryptography and complex simulations.
+                    </p>
+                </div>
+
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button onclick="goToHome()" id="back-btn-bottom" class="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition duration-200 shadow-md">Back to Home Page</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xl font-bold mb-4 logo-arabic-font">Be Mosharafa</h3>
+            <p class="text-sm text-gray-400">Computer Science Exploration Page. &copy; 2025 Be Mosharafa.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Translation Data for Computer Science Page ---
+        const translations = {
+            en: {
+                title: "Be Mosharafa | Computer Science Field Details",
+                main_title: "Computer Science",
+                subtitle: "Formal Science and Technology Field Details",
+                back_btn: "Back to Home Page",
+                summary_heading: "Field Summary",
+                
+                field_summary: "Computer Science is the study of computation, information, and automation. It covers the theoretical foundations of information and computation, along with practical techniques for the implementation and application of computing systems. This discipline drives the digital world, focusing on designing efficient algorithms, developing intelligent software, and engineering robust hardware and networking infrastructure.",
+                
+                subfields_heading: "Key Sub-Fields",
+
+                subfield_1_title: "Theoretical Computer Science",
+                subfield_1_summary: "Focuses on the abstract and mathematical foundations of computing. Key areas include computability theory (what can be computed), complexity theory (how fast problems can be solved), and formal logic, setting the ultimate limits of computer power.",
+                
+                subfield_2_title: "Algorithms and Data Structures",
+                subfield_2_summary: "Algorithms define the step-by-step procedures to solve specific problems, while data structures define how data is organized and stored efficiently (e.g., arrays, trees, graphs). Mastering this is central to writing high-performance, scalable code.",
+                
+                subfield_3_title: "Programming Languages",
+                subfield_3_summary: "The study of the design, implementation, analysis, and characteristics of programming languages. It examines language syntax, semantics, type theory, and paradigms (object-oriented, functional), focusing on how humans write instructions for machines.",
+
+                subfield_4_title: "Computer Architecture",
+                subfield_4_summary: "Concerns the conceptual design and fundamental operational structure of a computer system. This includes the design of the CPU, memory hierarchy, and input/output components, aiming to maximize processing speed and efficiency.",
+                
+                subfield_5_title: "Artificial Intelligence (AI)",
+                subfield_5_summary: "The development of computer systems capable of performing tasks that typically require human intelligence, such as visual perception, speech recognition, decision-making, and natural language translation. Machine Learning is a primary sub-area of AI.",
+
+                subfield_6_title: "Software Engineering",
+                subfield_6_summary: "A disciplined, systematic approach to the design, development, and maintenance of software systems. It focuses on methodologies (like Agile), quality control, testing, and managing complex projects to ensure software is reliable and delivered efficiently.",
+
+                subfield_7_title: "Computer Networks and Security",
+                subfield_7_summary: "Studies the protocols and architecture used for communication between computers (e.g., the Internet, Wi-Fi). Security focuses on protecting computer systems and data from unauthorized access, use, disclosure, disruption, modification, or destruction.",
+                
+                subfield_8_title: "Quantum Computing",
+                subfield_8_summary: "A cutting-edge field focused on developing quantum computers based on quantum mechanics principles (superposition and entanglement). It explores algorithms (like Shor's and Grover's) capable of solving problems currently intractable for classical computers, especially in cryptography and complex simulations.",
+
+                lang_text: "العربية"
+            },
+            ar: {
+                title: "كُن مُشرفة | تفاصيل تخصص علوم الحاسب",
+                main_title: "علوم الحاسب",
+                subtitle: "تفاصيل مجال العلوم الشكلية والتكنولوجيا",
+                back_btn: "العودة إلى الصفحة الرئيسية",
+                summary_heading: "ملخص التخصص",
+                
+                field_summary: "علوم الحاسب هي دراسة الحوسبة والمعلومات والأتمتة. يغطي هذا المجال الأسس النظرية للمعلومات والحوسبة، إلى جانب التقنيات العملية لتطبيق أنظمة الحوسبة. يقود هذا التخصص العالم الرقمي، ويركز على تصميم الخوارزميات الفعالة، وتطوير البرامج الذكية، وهندسة الأجهزة والبنية التحتية للشبكات القوية.",
+                
+                subfields_heading: "التخصصات الفرعية الرئيسية",
+
+                subfield_1_title: "علوم الحاسب النظرية",
+                subfield_1_summary: "تركز على الأسس المجردة والرياضية للحوسبة. تشمل المجالات الرئيسية نظرية الحوسبة (ما يمكن حسابه)، ونظرية التعقيد (مدى سرعة حل المشكلات)، والمنطق الشكلي، مما يحدد الحدود القصوى لقوة الحاسوب.",
+                
+                subfield_2_title: "الخوارزميات وهياكل البيانات",
+                subfield_2_summary: "تحدد الخوارزميات الإجراءات خطوة بخطوة لحل مشكلات محددة، بينما تحدد هياكل البيانات كيفية تنظيم البيانات وتخزينها بكفاءة (مثل المصفوفات، الأشجار، الرسوم البيانية). إتقان هذا هو جوهر كتابة أكواد عالية الأداء وقابلة للتوسع.",
+                
+                subfield_3_title: "لغات البرمجة",
+                subfield_3_summary: "دراسة تصميم وتطبيق وتحليل وخصائص لغات البرمجة. يبحث في بناء الجملة والدلالات ونظرية الأنواع والنماذج (الكائنية، الوظيفية) للغة، مع التركيز على كيفية كتابة البشر للتعليمات للآلات.",
+
+                subfield_4_title: "هندسة الحاسب",
+                subfield_4_summary: "تتعلق بالتصميم المفاهيمي والهيكل التشغيلي الأساسي لنظام الحاسوب. يشمل ذلك تصميم وحدة المعالجة المركزية (CPU)، وتسلسل الذاكرة الهرمي، ومكونات الإدخال/الإخراج، بهدف زيادة سرعة المعالجة والكفاءة.",
+                
+                subfield_5_title: "الذكاء الاصطناعي (AI)",
+                subfield_5_summary: "تطوير أنظمة حاسوبية قادرة على أداء المهام التي تتطلب عادةً الذكاء البشري، مثل الإدراك البصري والتعرف على الكلام واتخاذ القرار والترجمة الآلية للغة. يعد التعلم الآلي (Machine Learning) منطقة فرعية رئيسية من الذكاء الاصطناعي.",
+
+                subfield_6_title: "هندسة البرمجيات",
+                subfield_6_summary: "نهج منضبط ومنهجي لتصميم وتطوير وصيانة أنظمة البرمجيات. يركز على المنهجيات (مثل أجايل)، ومراقبة الجودة، والاختبار، وإدارة المشاريع المعقدة لضمان موثوقية البرامج وتسليمها بكفاءة.",
+
+                subfield_7_title: "شبكات الحاسب والأمن",
+                subfield_7_summary: "دراسة البروتوكولات والهندسة المعمارية المستخدمة للاتصال بين أجهزة الحاسوب (مثل الإنترنت، والواي فاي). يركز الأمن على حماية أنظمة الحاسوب والبيانات من الوصول أو الاستخدام أو الكشف أو التعطيل أو التعديل أو التدمير غير المصرح به.",
+                
+                subfield_8_title: "الحوسبة الكمومية",
+                subfield_8_summary: "مجال متطور يركز على تطوير أجهزة حاسوب كمومية تعتمد على مبادئ ميكانيكا الكم (التراكب والتشابك). يستكشف الخوارزميات (مثل شور وجروفر) القادرة على حل المشكلات التي يستعصي حلها حاليًا على أجهزة الحاسوب الكلاسيكية، خاصة في التشفير والمحاكاة المعقدة.",
+
+                lang_text: "English"
+            }
+        };
+
+        let currentLang = 'en';
+
+        // --- Core Functions ---
+        // This function explicitly sends the user back to the assumed home file (index.html)
+        function goToHome() {
+            // NOTE: Replace 'index.html' with the actual filename of your main home page if it is different.
+            window.location.href = 'be_mosharafa.html'; 
+        }
+
+        // Initialize language settings on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            currentLang = 'en';
+            applyTranslations('en');
+        });
+
+        function applyTranslations(lang) {
+            const data = translations[lang];
+            const htmlTag = document.documentElement;
+            const body = document.body;
+
+            // Set global direction and font
+            htmlTag.lang = lang;
+            htmlTag.dir = (lang === 'ar' ? 'rtl' : 'ltr');
+            
+            if (lang === 'ar') {
+                body.classList.add('font-arabic');
+                body.classList.add('rtl');
+            } else {
+                body.classList.remove('font-arabic');
+                body.classList.remove('rtl');
+            }
+            
+            // Apply text translations
+            document.title = data.title;
+            document.getElementById('lang-text').textContent = data.lang_text;
+            
+            // Apply text to the two back buttons
+            document.getElementById('back-btn-nav').textContent = data.back_btn;
+            document.getElementById('back-btn-bottom').textContent = data.back_btn;
+
+            document.getElementById('main-title').textContent = data.main_title;
+            document.getElementById('page-subtitle').textContent = data.subtitle;
+            document.getElementById('summary-heading').textContent = data.summary_heading;
+            document.getElementById('field-summary').textContent = data.field_summary;
+            document.getElementById('subfields-heading').textContent = data.subfields_heading;
+
+            // Sub-field translations (8 fields)
+            document.getElementById('subfield-1-title').textContent = data.subfield_1_title;
+            document.getElementById('subfield-1-summary').textContent = data.subfield_1_summary;
+            document.getElementById('subfield-2-title').textContent = data.subfield_2_title;
+            document.getElementById('subfield-2-summary').textContent = data.subfield_2_summary;
+            document.getElementById('subfield-3-title').textContent = data.subfield_3_title;
+            document.getElementById('subfield-3-summary').textContent = data.subfield_3_summary;
+            document.getElementById('subfield-4-title').textContent = data.subfield_4_title;
+            document.getElementById('subfield-4-summary').textContent = data.subfield_4_summary;
+            document.getElementById('subfield-5-title').textContent = data.subfield_5_title;
+            document.getElementById('subfield-5-summary').textContent = data.subfield_5_summary;
+            document.getElementById('subfield-6-title').textContent = data.subfield_6_title;
+            document.getElementById('subfield-6-summary').textContent = data.subfield_6_summary;
+            document.getElementById('subfield-7-title').textContent = data.subfield_7_title;
+            document.getElementById('subfield-7-summary').textContent = data.subfield_7_summary;
+            document.getElementById('subfield-8-title').textContent = data.subfield_8_title;
+            document.getElementById('subfield-8-summary').textContent = data.subfield_8_summary;
+            
+            currentLang = lang;
+        }
+
+        function toggleLanguage() {
+            const newLang = (currentLang === 'en' ? 'ar' : 'en');
+            applyTranslations(newLang);
+        }
+    </script>
+</body>
+</html>

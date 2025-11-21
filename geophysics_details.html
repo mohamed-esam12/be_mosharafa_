@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Mosharafa | Geophysics Field Details</title>
+    <link rel="icon" type="image/png" href="be_mosharafa.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cairo:wght@400;600;700&family=Rakkas&display=swap" rel="stylesheet">
+    
+    <style>
+        /* BASE STYLES */
+        body { font-family: 'Inter', sans-serif; }
+        .font-arabic { font-family: 'Cairo', sans-serif; }
+        .logo-arabic-font { font-family: 'Rakkas', cursive; }
+        
+        /* New page specific styling (Consistent with previous pages) */
+        .detail-card {
+            border-left: 4px solid #1f2937; /* Gray-800 for contrast */
+            transition: box-shadow 0.3s ease;
+        }
+        .rtl .detail-card {
+            border-left: none;
+            border-right: 4px solid #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <nav id="navbar" class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="be_mosharafa.png" alt="Be Mosharafa Logo" class="h-10 w-auto me-2">
+                    <span id="brand-name" class="font-bold text-xl tracking-tight text-gray-900">Be Mosharafa</span>
+                </div>
+                <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                    <button onclick="toggleLanguage()" class="flex items-center text-gray-600 hover:text-black border border-gray-300 px-3 py-1 rounded-md text-sm transition hover:bg-gray-100">
+                        <i class="fa-solid fa-globe me-2 text-gray-500"></i>
+                        <span id="lang-text" class="font-medium">العربية</span>
+                    </button>
+                    <button onclick="goToHome()" id="back-btn-nav" class="bg-black text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition duration-200 shadow-md">Back to Fields</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-24 pb-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="text-center mb-12">
+                <h1 id="main-title" class="text-5xl font-extrabold text-gray-900 mt-4 leading-tight">Geophysics</h1>
+                <p id="page-subtitle" class="mt-2 text-xl text-gray-600">Earth Science Field Details</p>
+                <div class="inline-block mt-4 text-gray-500">
+                    <i class="fa-solid fa-globe-africa text-5xl opacity-80"></i>
+                </div>
+            </header>
+
+            <div class="bg-white p-8 rounded-xl shadow-xl mb-16">
+                <h2 id="summary-heading" class="text-3xl font-bold text-gray-800 border-b border-gray-300 pb-3 mb-4">Field Summary</h2>
+                <p id="field-summary" class="text-lg text-gray-700 leading-relaxed">
+                    Geophysics is the field that **applies the principles of physics**—such as mechanics, thermodynamics, and electromagnetism—to study the Earth's interior and surface processes. It uses sophisticated instruments to map and analyze hidden structures, forces, and fields, including the planet's gravitational, magnetic, and thermal properties. Geophysics is essential for **natural hazard mitigation** (earthquakes, volcanoes) and the **discovery of natural resources** (oil, gas, water, minerals).
+                </p>
+            </div>
+            
+            <h2 id="subfields-heading" class="text-3xl font-bold text-gray-800 border-b-2 border-gray-300 pb-3 mb-6">Key Sub-Fields</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="subfields-grid">
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-1-title" class="text-2xl font-semibold text-gray-900">Seismology</h3>
+                    <p id="subfield-1-summary" class="mt-2 text-gray-600">
+                        The study of **earthquakes** and the propagation of **elastic waves (seismic waves)** through the Earth. Seismologists use these waves to probe the Earth's interior structure, locate tectonic faults, and quantify seismic hazards in specific regions.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-2-title" class="text-2xl font-semibold text-gray-900">Geomagnetism</h3>
+                    <p id="subfield-2-summary" class="mt-2 text-gray-600">
+                        Dedicated to studying the **Earth's magnetic field**—its origin, strength, direction, and long-term changes (paleomagnetism). The field is generated by convection currents in the molten outer core and protects the planet from solar radiation.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-3-title" class="text-2xl font-semibold text-gray-900">Gravimetry</h3>
+                    <p id="subfield-3-summary" class="mt-2 text-gray-600">
+                        The measurement of the **Earth's gravitational field** and its subtle variations. These variations are linked to density differences in the crust and mantle, making gravimetry a powerful tool for mapping large, underground structures like basins, salt domes, and mountain roots.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-4-title" class="text-2xl font-semibold text-gray-900">Tectonophysics</h3>
+                    <p id="subfield-4-summary" class="mt-2 text-gray-600">
+                        Focuses on the **physical processes and forces** that cause large-scale deformation of the Earth's crust, including plate tectonics, continental rift formation, and the creation of mountains. It uses mathematical modeling and laboratory experiments to understand rock mechanics under high pressure.
+                    </p>
+                </div>
+                
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-5-title" class="text-2xl font-semibold text-gray-900">Geodynamics</h3>
+                    <p id="subfield-5-summary" class="mt-2 text-gray-600">
+                        Studies the **dynamics and internal composition of the Earth**, particularly the flow and convection processes within the mantle and core. This field links surface phenomena (like plate motion) to deep-Earth physics, often involving thermal and fluid mechanics modeling.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-6-title" class="text-2xl font-semibold text-gray-900">Volcanology</h3>
+                    <p id="subfield-6-summary" class="mt-2 text-gray-600">
+                        The study of **volcanoes, lava, magma, and related geological and geophysical phenomena**. Volcanologists monitor seismic activity, ground deformation, and gas emissions to predict eruptions and assess volcanic hazards.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-7-title" class="text-2xl font-semibold text-gray-900">Oceanography</h3>
+                    <p id="subfield-7-summary" class="mt-2 text-gray-600">
+                        The scientific study of the **oceans**, often specializing in the physical processes like currents, waves, and the structure of the **seafloor**. It uses acoustic and seismic surveys to map submarine topography and crustal composition.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-8-title" class="text-2xl font-semibold text-gray-900">Exploration Geophysics</h3>
+                    <p id="subfield-8-summary" class="mt-2 text-gray-600">
+                        The practical application of geophysical techniques (seismic reflection, magnetic, gravity) to **locate valuable subsurface resources** such as oil, natural gas, mineral deposits, and groundwater. This field directly supports the energy and mining industries.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button onclick="goToHome()" id="back-btn-bottom" class="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition duration-200 shadow-md">Back to Home Page</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xl font-bold mb-4 logo-arabic-font">Be Mosharafa</h3>
+            <p class="text-sm text-gray-400">Geophysics Exploration Page. &copy; 2025 Be Mosharafa.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Translation Data for Geophysics Page ---
+        const translations = {
+            en: {
+                title: "Be Mosharafa | Geophysics Field Details",
+                main_title: "Geophysics",
+                subtitle: "Earth Science Field Details",
+                back_btn: "Back to Home Page",
+                summary_heading: "Field Summary",
+                
+                field_summary: "Geophysics is the field that applies the principles of physics—such as mechanics, thermodynamics, and electromagnetism—to study the Earth's interior and surface processes. It uses sophisticated instruments to map and analyze hidden structures, forces, and fields, including the planet's gravitational, magnetic, and thermal properties. Geophysics is essential for natural hazard mitigation (earthquakes, volcanoes) and the discovery of natural resources (oil, gas, water, minerals).",
+                
+                subfields_heading: "Key Sub-Fields",
+
+                subfield_1_title: "Seismology",
+                subfield_1_summary: "The study of earthquakes and the propagation of elastic waves (seismic waves) through the Earth. Seismologists use these waves to probe the Earth's interior structure, locate tectonic faults, and quantify seismic hazards in specific regions.",
+                
+                subfield_2_title: "Geomagnetism",
+                subfield_2_summary: "Dedicated to studying the Earth's magnetic field—its origin, strength, direction, and long-term changes (paleomagnetism). The field is generated by convection currents in the molten outer core and protects the planet from solar radiation.",
+                
+                subfield_3_title: "Gravimetry",
+                subfield_3_summary: "The measurement of the Earth's gravitational field and its subtle variations. These variations are linked to density differences in the crust and mantle, making gravimetry a powerful tool for mapping large, underground structures like basins, salt domes, and mountain roots.",
+
+                subfield_4_title: "Tectonophysics",
+                subfield_4_summary: "Focuses on the physical processes and forces that cause large-scale deformation of the Earth's crust, including plate tectonics, continental rift formation, and the creation of mountains. It uses mathematical modeling and laboratory experiments to understand rock mechanics under high pressure.",
+                
+                subfield_5_title: "Geodynamics",
+                subfield_5_summary: "Studies the dynamics and internal composition of the Earth, particularly the flow and convection processes within the mantle and core. This field links surface phenomena (like plate motion) to deep-Earth physics, often involving thermal and fluid mechanics modeling.",
+
+                subfield_6_title: "Volcanology",
+                subfield_6_summary: "The study of volcanoes, lava, magma, and related geological and geophysical phenomena. Volcanologists monitor seismic activity, ground deformation, and gas emissions to predict eruptions and assess volcanic hazards.",
+
+                subfield_7_title: "Oceanography",
+                subfield_7_summary: "The scientific study of the oceans, often specializing in the physical processes like currents, waves, and the structure of the seafloor. It uses acoustic and seismic surveys to map submarine topography and crustal composition.",
+
+                subfield_8_title: "Exploration Geophysics",
+                subfield_8_summary: "The practical application of geophysical techniques (seismic reflection, magnetic, gravity) to locate valuable subsurface resources such as oil, natural gas, mineral deposits, and groundwater. This field directly supports the energy and mining industries.",
+
+                lang_text: "العربية"
+            },
+            ar: {
+                title: "كُن مُشرفة | تفاصيل تخصص الجيوفيزياء",
+                main_title: "الجيوفيزياء",
+                subtitle: "تفاصيل مجال علوم الأرض",
+                back_btn: "العودة إلى الصفحة الرئيسية",
+                summary_heading: "ملخص التخصص",
+                
+                field_summary: "الجيوفيزياء هو المجال الذي يطبق مبادئ الفيزياء — مثل الميكانيكا والديناميكا الحرارية والكهرومغناطيسية — لدراسة العمليات الداخلية والسطحية للأرض. يستخدم أدوات متطورة لرسم وتحليل الهياكل والقوى والمجالات المخفية، بما في ذلك الخصائص الجاذبية والمغناطيسية والحرارية للكوكب. الجيوفيزياء ضرورية للتخفيف من المخاطر الطبيعية (الزلازل والبراكين) ولاكتشاف الموارد الطبيعية (النفط والغاز والمياه والمعادن).",
+                
+                subfields_heading: "التخصصات الفرعية الرئيسية",
+
+                subfield_1_title: "علم الزلازل",
+                subfield_1_summary: "دراسة الزلازل وانتشار الموجات المرنة (الموجات الزلزالية) عبر الأرض. يستخدم علماء الزلازل هذه الموجات لفحص البنية الداخلية للأرض، وتحديد مواقع الصدوع التكتونية، وقياس المخاطر الزلزالية في مناطق محددة.",
+                
+                subfield_2_title: "المغناطيسية الأرضية",
+                subfield_2_summary: "مخصص لدراسة المجال المغناطيسي للأرض — أصله وقوته واتجاهه وتغيراته طويلة الأمد (المغناطيسية القديمة). يتولد المجال عن طريق تيارات الحمل الحراري في اللب الخارجي المنصهر ويحمي الكوكب من الإشعاع الشمسي.",
+                
+                subfield_3_title: "قياس الجاذبية",
+                subfield_3_summary: "قياس المجال الجاذبي للأرض وتغيراته الدقيقة. ترتبط هذه التغيرات باختلافات الكثافة في القشرة والوشاح، مما يجعل قياس الجاذبية أداة قوية لرسم خرائط الهياكل الكبيرة تحت الأرض مثل الأحواض والقباب الملحية وجذور الجبال.",
+
+                subfield_4_title: "فيزياء التكتونية",
+                subfield_4_summary: "يركز على العمليات والقوى الفيزيائية التي تسبب تشوه القشرة الأرضية على نطاق واسع، بما في ذلك تكتونية الصفائح وتكوين الصدوع القارية وإنشاء الجبال. يستخدم النمذجة الرياضية والتجارب المعملية لفهم ميكانيكا الصخور تحت الضغط العالي.",
+                
+                subfield_5_title: "ديناميكا الأرض",
+                subfield_5_summary: "يدرس ديناميكيات وتكوين الأرض الداخلي، وخاصة عمليات التدفق والحمل الحراري داخل الوشاح واللب. يربط هذا المجال الظواهر السطحية (مثل حركة الصفائح) بفيزياء الأرض العميقة، وغالباً ما يتضمن نمذجة حرارية وميكانيكا الموائع.",
+
+                subfield_6_title: "علم البراكين",
+                subfield_6_summary: "دراسة البراكين والحمم والماجما والظواهر الجيولوجية والجيوفيزيائية ذات الصلة. يراقب علماء البراكين النشاط الزلزالي وتشوه الأرض وانبعاثات الغاز للتنبؤ بالانفجارات وتقييم المخاطر البركانية.",
+
+                subfield_7_title: "علم المحيطات",
+                subfield_7_summary: "الدراسة العلمية للمحيطات، وغالباً ما تتخصص في العمليات الفيزيائية مثل التيارات والأمواج وبنية قاع البحر. يستخدم المسح الصوتي والزلزالي لرسم خرائط التضاريس تحت الماء وتكوين القشرة.",
+
+                subfield_8_title: "الجيوفيزياء الاستكشافية",
+                subfield_8_summary: "التطبيق العملي للتقنيات الجيوفيزيائية (الانعكاس الزلزالي، المغناطيسي، الجاذبية) لتحديد موقع الموارد الجوفية القيمة مثل النفط والغاز الطبيعي ورواسب المعادن والمياه الجوفية. يدعم هذا المجال بشكل مباشر صناعات الطاقة والتعدين.",
+
+                lang_text: "English"
+            }
+        };
+
+        let currentLang = 'en';
+
+        // --- Core Functions ---
+        // This function explicitly sends the user back to the assumed home file (index.html)
+        function goToHome() {
+            // NOTE: Replace 'index.html' with the actual filename of your main home page if it is different.
+            window.location.href = 'be_mosharafa.html'; 
+        }
+
+        // Initialize language settings on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            currentLang = 'en';
+            applyTranslations('en');
+        });
+
+        function applyTranslations(lang) {
+            const data = translations[lang];
+            const htmlTag = document.documentElement;
+            const body = document.body;
+
+            // Set global direction and font
+            htmlTag.lang = lang;
+            htmlTag.dir = (lang === 'ar' ? 'rtl' : 'ltr');
+            
+            if (lang === 'ar') {
+                body.classList.add('font-arabic');
+                body.classList.add('rtl');
+            } else {
+                body.classList.remove('font-arabic');
+                body.classList.remove('rtl');
+            }
+            
+            // Apply text translations
+            document.title = data.title;
+            document.getElementById('lang-text').textContent = data.lang_text;
+            
+            // Apply text to the two back buttons
+            document.getElementById('back-btn-nav').textContent = data.back_btn;
+            document.getElementById('back-btn-bottom').textContent = data.back_btn;
+
+            document.getElementById('main-title').textContent = data.main_title;
+            document.getElementById('page-subtitle').textContent = data.subtitle;
+            document.getElementById('summary-heading').textContent = data.summary_heading;
+            document.getElementById('field-summary').textContent = data.field_summary;
+            document.getElementById('subfields-heading').textContent = data.subfields_heading;
+
+            // Sub-field translations (8 fields)
+            document.getElementById('subfield-1-title').textContent = data.subfield_1_title;
+            document.getElementById('subfield-1-summary').textContent = data.subfield_1_summary;
+            document.getElementById('subfield-2-title').textContent = data.subfield_2_title;
+            document.getElementById('subfield-2-summary').textContent = data.subfield_2_summary;
+            document.getElementById('subfield-3-title').textContent = data.subfield_3_title;
+            document.getElementById('subfield-3-summary').textContent = data.subfield_3_summary;
+            document.getElementById('subfield-4-title').textContent = data.subfield_4_title;
+            document.getElementById('subfield-4-summary').textContent = data.subfield_4_summary;
+            document.getElementById('subfield-5-title').textContent = data.subfield_5_title;
+            document.getElementById('subfield-5-summary').textContent = data.subfield_5_summary;
+            document.getElementById('subfield-6-title').textContent = data.subfield_6_title;
+            document.getElementById('subfield-6-summary').textContent = data.subfield_6_summary;
+            document.getElementById('subfield-7-title').textContent = data.subfield_7_title;
+            document.getElementById('subfield-7-summary').textContent = data.subfield_7_summary;
+            document.getElementById('subfield-8-title').textContent = data.subfield_8_title;
+            document.getElementById('subfield-8-summary').textContent = data.subfield_8_summary;
+            
+            currentLang = lang;
+        }
+
+        function toggleLanguage() {
+            const newLang = (currentLang === 'en' ? 'ar' : 'en');
+            applyTranslations(newLang);
+        }
+    </script>
+</body>
+</html>

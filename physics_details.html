@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Mosharafa | Physics Field Details</title>
+    <link rel="icon" type="image/png" href="be_mosharafa.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cairo:wght@400;600;700&family=Rakkas&display=swap" rel="stylesheet">
+    
+    <style>
+        /* BASE STYLES */
+        body { font-family: 'Inter', sans-serif; }
+        .font-arabic { font-family: 'Cairo', sans-serif; }
+        .logo-arabic-font { font-family: 'Rakkas', cursive; }
+        
+        /* New page specific styling */
+        .detail-card {
+            border-left: 4px solid #1f2937; /* Gray-800 for contrast */
+            transition: box-shadow 0.3s ease;
+        }
+        .rtl .detail-card {
+            border-left: none;
+            border-right: 4px solid #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <nav id="navbar" class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="be_mosharafa.png" alt="Be Mosharafa Logo" class="h-10 w-auto me-2">
+                    <span id="brand-name" class="font-bold text-xl tracking-tight text-gray-900">Be Mosharafa</span>
+                </div>
+                <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                    <button onclick="toggleLanguage()" class="flex items-center text-gray-600 hover:text-black border border-gray-300 px-3 py-1 rounded-md text-sm transition hover:bg-gray-100">
+                        <i class="fa-solid fa-globe me-2 text-gray-500"></i>
+                        <span id="lang-text" class="font-medium">العربية</span>
+                    </button>
+                    <button onclick="goToHome()" id="back-btn-nav" class="bg-black text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition duration-200 shadow-md">Back to Fields</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-24 pb-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="text-center mb-12">
+                <h1 id="main-title" class="text-5xl font-extrabold text-gray-900 mt-4 leading-tight">Physics</h1>
+                <p id="page-subtitle" class="mt-2 text-xl text-gray-600">Core Science Field Details</p>
+                <div class="inline-block mt-4 text-gray-500">
+                    <i class="fa-solid fa-atom text-5xl opacity-80"></i>
+                </div>
+            </header>
+
+            <div class="bg-white p-8 rounded-xl shadow-xl mb-16">
+                <h2 id="summary-heading" class="text-3xl font-bold text-gray-800 border-b border-gray-300 pb-3 mb-4">Field Summary</h2>
+                <p id="field-summary" class="text-lg text-gray-700 leading-relaxed">
+                    Physics is the fundamental natural science concerned with understanding the universe at its most basic level. It studies the properties of matter, energy, space, and time, and the interactions between them. Modern physics is broadly divided between classical concepts (mechanics, thermodynamics) and modern concepts (relativity, quantum mechanics), which collectively explain phenomena from the smallest subatomic particles to the largest galaxies. Its pursuit aims to discover the universal laws that govern all natural processes.
+                </p>
+            </div>
+
+            <h2 id="subfields-heading" class="text-3xl font-bold text-gray-800 border-b-2 border-gray-300 pb-3 mb-6">Key Sub-Fields</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="subfields-grid">
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-1-title" class="text-2xl font-semibold text-gray-900">Theoretical Physics</h3>
+                    <p id="subfield-1-summary" class="mt-2 text-gray-600">
+                        Focuses on developing abstract mathematical models and conceptual frameworks to understand and explain physical systems. This branch guides experimental physics by predicting results, and it often ventures into areas like string theory or grand unified theories, aiming for a consistent description of nature.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-2-title" class="text-2xl font-semibold text-gray-900">Mathematical Physics</h3>
+                    <p id="subfield-2-summary" class="mt-2 text-gray-600">
+                        The use of mathematics to solve problems in physics, often concerning the mathematical structure and rigor of physical theories. It ensures that physics principles are mathematically sound, often involving advanced areas like differential geometry, functional analysis, and group theory.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-3-title" class="text-2xl font-semibold text-gray-900">Classical Mechanics</h3>
+                    <p id="subfield-3-summary" class="mt-2 text-gray-600">
+                        Also known as Newtonian Mechanics. It describes the motion of macroscopic objects under the action of forces. This branch is highly accurate for non-relativistic velocities and remains crucial for engineering, orbital mechanics, and everyday physical systems.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-4-title" class="text-2xl font-semibold text-gray-900">Thermodynamics</h3>
+                    <p id="subfield-4-summary" class="mt-2 text-gray-600">
+                        Governs the relationships between heat, work, temperature, and energy at a macroscopic level. Its three laws dictate the limits of energy conversion efficiency and explain phase transitions (solid, liquid, gas), making it vital for power generation and chemical processes.
+                    </p>
+                </div>
+                
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-5-title" class="text-2xl font-semibold text-gray-900">Quantum Mechanics</h3>
+                    <p id="subfield-5-summary" class="mt-2 text-gray-600">
+                        The revolutionary framework describing physical reality at the scale of atoms and subatomic particles. It introduced concepts like wave-particle duality and quantization, forming the basis for modern electronics, lasers, nuclear energy, and our understanding of chemical bonding.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-6-title" class="text-2xl font-semibold text-gray-900">Electromagnetism</h3>
+                    <p id="subfield-6-summary" class="mt-2 text-gray-600">
+                        The study of the electromagnetic force, which arises from electric charges and fields. It is unified by Maxwell's equations, explaining phenomena like electricity, magnetism, and light as aspects of the same force. It underpins all modern communications and electrical engineering.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-7-title" class="text-2xl font-semibold text-gray-900">Nuclear Physics</h3>
+                    <p id="subfield-7-summary" class="mt-2 text-gray-600">
+                        Investigates the structure of the atomic nucleus, the fundamental particles within it (protons and neutrons), and their interactions. Key areas include nuclear stability, fission (energy generation), fusion (star power), and the applications of radioactivity in medicine and archaeology.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-8-title" class="text-2xl font-semibold text-gray-900">Solid State Physics</h3>
+                    <p id="subfield-8-summary" class="mt-2 text-gray-600">
+                        Examines the physical properties of rigid materials (solids), particularly those with crystal structures, such as semiconductors, metals, and insulators. It studies how quantum mechanics and electromagnetic properties give rise to electrical conductivity, magnetism, and superconductivity, driving modern computing and materials science.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-9-title" class="text-2xl font-semibold text-gray-900">High-Energy Physics</h3>
+                    <p id="subfield-9-summary" class="mt-2 text-gray-600">
+                        (Often called Particle Physics). This branch seeks to understand the most basic fundamental particles (e.g., quarks, leptons) and the forces between them. Experiments often involve massive particle accelerators to probe the conditions of the early universe.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-10-title" class="text-2xl font-semibold text-gray-900">Acoustics</h3>
+                    <p id="subfield-10-summary" class="mt-2 text-gray-600">
+                        The science of sound, including its generation, transmission, reception, and effects. It encompasses the study of mechanical waves in various media and has applications ranging from music and architectural design to medical ultrasound and underwater sonar.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-11-title" class="text-2xl font-semibold text-gray-900">Optics</h3>
+                    <p id="subfield-11-summary" class="mt-2 text-gray-600">
+                        The branch of physics that studies the behavior and properties of light (visible, infrared, and ultraviolet radiation). It covers reflection, refraction, diffraction, and interference, forming the foundation for lenses, telescopes, fiber optics, and photonics technology.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button onclick="goToHome()" id="back-btn-bottom" class="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition duration-200 shadow-md">Back to Fields</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xl font-bold mb-4 logo-arabic-font">Be Mosharafa</h3>
+            <p class="text-sm text-gray-400">Physics Exploration Page. &copy; 2025 Be Mosharafa.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Translation Data for Physics Page ---
+        const translations = {
+            en: {
+                title: "Be Mosharafa | Physics Field Details",
+                brand: "Be Mosharafa",
+                main_title: "Physics",
+                subtitle: "Core Science Field Details",
+                back_btn: "Back to Home Page", // Updated button text
+                summary_heading: "Field Summary",
+                
+                field_summary: "Physics is the fundamental natural science concerned with understanding the universe at its most basic level. It studies the properties of matter, energy, space, and time, and the interactions between them. Modern physics is broadly divided between classical concepts (mechanics, thermodynamics) and modern concepts (relativity, quantum mechanics), which collectively explain phenomena from the smallest subatomic particles to the largest galaxies. Its pursuit aims to discover the universal laws that govern all natural processes.",
+                
+                subfields_heading: "Key Sub-Fields",
+
+                subfield_1_title: "Theoretical Physics",
+                subfield_1_summary: "Focuses on developing abstract mathematical models and conceptual frameworks to understand and explain physical systems. This branch guides experimental physics by predicting results, and it often ventures into areas like string theory or grand unified theories, aiming for a consistent description of nature.",
+                
+                subfield_2_title: "Mathematical Physics",
+                subfield_2_summary: "Applies rigorous mathematical methods to the problems of physics, including the formalization of physical theories. It ensures that physics principles are mathematically sound, often involving advanced areas like differential geometry, functional analysis, and group theory.",
+                
+                subfield_3_title: "Classical Mechanics",
+                subfield_3_summary: "Also known as Newtonian Mechanics. It describes the motion of macroscopic objects under the action of forces. This branch is highly accurate for non-relativistic velocities and remains crucial for engineering, orbital mechanics, and everyday physical systems.",
+
+                subfield_4_title: "Thermodynamics",
+                subfield_4_summary: "Governs the relationships between heat, work, temperature, and energy at a macroscopic level. Its three laws dictate the limits of energy conversion efficiency and explain phase transitions (solid, liquid, gas), making it vital for power generation and chemical processes.",
+                
+                subfield_5_title: "Quantum Mechanics",
+                subfield_5_summary: "The revolutionary framework describing physical reality at the scale of atoms and subatomic particles. It introduced concepts like wave-particle duality and quantization, forming the basis for modern electronics, lasers, nuclear energy, and our understanding of chemical bonding.",
+
+                subfield_6_title: "Electromagnetism",
+                subfield_6_summary: "The study of the electromagnetic force, which arises from electric charges and fields. It is unified by Maxwell's equations, explaining phenomena like electricity, magnetism, and light as aspects of the same force. It underpins all modern communications and electrical engineering.",
+
+                subfield_7_title: "Nuclear Physics",
+                subfield_7_summary: "Investigates the structure of the atomic nucleus, the fundamental particles within it (protons and neutrons), and their interactions. Key areas include nuclear stability, fission (energy generation), fusion (star power), and the applications of radioactivity in medicine and archaeology.",
+
+                subfield_8_title: "Solid State Physics",
+                subfield_8_summary: "Examines the physical properties of rigid materials (solids), particularly those with crystal structures, such as semiconductors, metals, and insulators. It studies how quantum mechanics and electromagnetic properties give rise to electrical conductivity, magnetism, and superconductivity, driving modern computing and materials science.",
+
+                subfield_9_title: "High-Energy Physics",
+                subfield_9_summary: "(Often called Particle Physics). This branch seeks to understand the most basic fundamental particles (e.g., quarks, leptons) and the forces between them. Experiments often involve massive particle accelerators to probe the conditions of the early universe.",
+                
+                subfield_10_title: "Acoustics",
+                subfield_10_summary: "The science of sound, including its generation, transmission, reception, and effects. It encompasses the study of mechanical waves in various media and has applications ranging from music and architectural design to medical ultrasound and underwater sonar.",
+
+                subfield_11_title: "Optics",
+                subfield_11_summary: "The branch of physics that studies the behavior and properties of light (visible, infrared, and ultraviolet radiation). It covers reflection, refraction, diffraction, and interference, forming the foundation for lenses, telescopes, fiber optics, and photonics technology.",
+
+                lang_text: "العربية"
+            },
+            ar: {
+                title: "كُن مُشرفة | تفاصيل تخصص الفيزياء",
+                brand: "كُن مُشرفة",
+                main_title: "الفيزياء",
+                subtitle: "تفاصيل مجال العلوم الأساسية",
+                back_btn: "العودة إلى الصفحة الرئيسية", // Updated button text
+                summary_heading: "ملخص التخصص",
+                
+                field_summary: "الفيزياء هي العلم الطبيعي الأساسي المعني بفهم الكون على مستواه الأساسي. تدرس خصائص المادة والطاقة والمكان والزمان والتفاعلات فيما بينها. تنقسم الفيزياء الحديثة بشكل عام بين المفاهيم الكلاسيكية (الميكانيكا، الديناميكا الحرارية) والمفاهيم الحديثة (النسبية، ميكانيكا الكم)، والتي تفسر معاً الظواهر بدءاً من أصغر الجسيمات دون الذرية وصولاً إلى أكبر المجرات. هدفها هو اكتشاف القوانين الكونية التي تحكم جميع العمليات الطبيعية.",
+                
+                subfields_heading: "التخصصات الفرعية الرئيسية",
+
+                subfield_1_title: "الفيزياء النظرية",
+                subfield_1_summary: "تركز على تطوير النماذج الرياضية المجردة والأطر المفاهيمية لفهم وشرح الأنظمة الفيزيائية. يوجه هذا الفرع الفيزياء التجريبية من خلال التنبؤ بالنتائج، وغالباً ما يغامر في مجالات مثل نظرية الأوتار أو النظريات الموحدة الكبرى، بهدف الوصول إلى وصف متسق للطبيعة.",
+                
+                subfield_2_title: "الفيزياء الرياضية",
+                subfield_2_summary: "استخدام الرياضيات لحل المشكلات في الفيزياء، وغالباً ما يتعلق بالهيكل الرياضي والنظام الصارم للنظريات الفيزيائية. وهي تضمن أن تكون مبادئ الفيزياء سليمة رياضياً، وغالباً ما تتضمن مجالات متقدمة مثل الهندسة التفاضلية والتحليل الدالي ونظرية المجموعات.",
+
+                subfield_3_title: "الميكانيكا الكلاسيكية",
+                subfield_3_summary: "تُعرف أيضاً بميكانيكا نيوتن. تصف حركة الأجسام العيانية تحت تأثير القوى. يعد هذا الفرع دقيقاً جداً للسرعات غير النسبية ويظل حاسماً في الهندسة والميكانيكا المدارية والأنظمة الفيزيائية اليومية.",
+
+                subfield_4_title: "الديناميكا الحرارية",
+                subfield_4_summary: "تحكم العلاقات بين الحرارة والشغل ودرجة الحرارة والطاقة على مستوى عياني (ماكروسكوبي). تملي قوانينها الثلاثة حدود كفاءة تحويل الطاقة وتشرح تحولات الطور (الصلب، السائل، الغاز)، مما يجعلها حيوية لتوليد الطاقة والعمليات الكيميائية.",
+                
+                subfield_5_title: "ميكانيكا الكم",
+                subfield_5_summary: "الإطار الثوري الذي يصف الواقع الفيزيائي على مستوى الذرات والجسيمات دون الذرية. قدمت مفاهيم مثل الازدواجية الموجية-الجسيمية والتكميم، وتشكل أساس الإلكترونيات الحديثة والليزر والطاقة النووية وفهمنا للروابط الكيميائية.",
+
+                subfield_6_title: "الكهرومغناطيسية",
+                subfield_6_summary: "دراسة القوة الكهرومغناطيسية التي تنشأ عن الشحنات والمجالات الكهربائية. تم توحيدها بواسطة معادلات ماكسويل، وتشرح ظواهر مثل الكهرباء والمغناطيسية والضوء كجوانب لنفس القوة. وهي تدعم جميع الاتصالات والهندسة الكهربائية الحديثة.",
+
+                subfield_7_title: "الفيزياء النووية",
+                subfield_7_summary: "تستقصي بنية النواة الذرية، والجسيمات الأساسية داخلها (البروتونات والنيوترونات)، وتفاعلاتها. تشمل المجالات الرئيسية الاستقرار النووي والانشطار (توليد الطاقة) والاندماج (طاقة النجوم) وتطبيقات النشاط الإشعاعي في الطب والآثار.",
+
+                subfield_8_title: "فيزياء الحالة الصلبة",
+                subfield_8_summary: "تفحص الخصائص الفيزيائية للمواد الصلبة (الجامدة)، وخاصة تلك التي لها هياكل بلورية، مثل أشباه الموصلات والمعادن والمواد العازلة. تدرس كيف تؤدي ميكانيكا الكم والخصائص الكهرومغناطيسية إلى التوصيل الكهربائي والمغناطيسية والموصلية الفائقة، مما يدفع الحوسبة الحديثة وعلوم المواد.",
+
+                subfield_9_title: "فيزياء الطاقة العالية",
+                subfield_9_summary: "(تُعرف غالباً فيزياء الجسيمات). يسعى هذا الفرع إلى فهم الجسيمات الأساسية الأكثر جوهرية (مثل الكواركات، الليبتونات) والقوى بينها. غالباً ما تتضمن التجارب مسرعات جسيمات ضخمة لفحص ظروف الكون المبكر.",
+                
+                subfield_10_title: "الصوتيات",
+                subfield_10_summary: "علم الصوت، بما في ذلك توليده ونقله واستقباله وتأثيراته. يشمل دراسة الموجات الميكانيكية في وسائط مختلفة، وله تطبيقات تتراوح بين الموسيقى والتصميم المعماري إلى الموجات فوق الصوتية الطبية والسونار تحت الماء.",
+
+                subfield_11_title: "البصريات",
+                subfield_11_summary: "الفرع المخصص لسلوك وخصائص الضوء (الإشعاع المرئي والأشعة تحت الحمراء وفوق البنفسجية). يغطي الانعكاس والانكسار والحيود والتداخل، ويشكل الأساس للعدسات والتلسكوبات والألياف البصرية وتقنية الفوتونات.",
+
+                lang_text: "English"
+            }
+        };
+
+        let currentLang = 'en';
+
+        // --- NEW FUNCTION ---
+        // This function explicitly sends the user back to the assumed home file (index.html)
+        function goToHome() {
+            // NOTE: Replace 'index.html' with the actual filename of your main home page if it is different.
+            window.location.href = 'be_mosharafa.html'; 
+        }
+
+        // Initialize language settings on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            currentLang = 'en';
+            applyTranslations('en');
+        });
+
+        function applyTranslations(lang) {
+            const data = translations[lang];
+            const htmlTag = document.documentElement;
+            const body = document.body;
+
+            // Set global direction and font
+            htmlTag.lang = lang;
+            htmlTag.dir = (lang === 'ar' ? 'rtl' : 'ltr');
+            
+            if (lang === 'ar') {
+                body.classList.add('font-arabic');
+                body.classList.add('rtl');
+            } else {
+                body.classList.remove('font-arabic');
+                body.classList.remove('rtl');
+            }
+            
+            // Apply text translations
+            document.title = data.title;
+            document.getElementById('lang-text').textContent = data.lang_text;
+            
+            // Apply text to the two back buttons
+            document.getElementById('back-btn-nav').textContent = data.back_btn;
+            document.getElementById('back-btn-bottom').textContent = data.back_btn;
+
+            document.getElementById('main-title').textContent = data.main_title;
+            document.getElementById('page-subtitle').textContent = data.subtitle;
+            document.getElementById('summary-heading').textContent = data.summary_heading;
+            document.getElementById('field-summary').textContent = data.field_summary;
+            document.getElementById('subfields-heading').textContent = data.subfields_heading;
+
+            // Sub-field translations (11 fields)
+            document.getElementById('subfield-1-title').textContent = data.subfield_1_title;
+            document.getElementById('subfield-1-summary').textContent = data.subfield_1_summary;
+            document.getElementById('subfield-2-title').textContent = data.subfield_2_title;
+            document.getElementById('subfield-2-summary').textContent = data.subfield_2_summary;
+            document.getElementById('subfield-3-title').textContent = data.subfield_3_title;
+            document.getElementById('subfield-3-summary').textContent = data.subfield_3_summary;
+            document.getElementById('subfield-4-title').textContent = data.subfield_4_title;
+            document.getElementById('subfield-4-summary').textContent = data.subfield_4_summary;
+            document.getElementById('subfield-5-title').textContent = data.subfield_5_title;
+            document.getElementById('subfield-5-summary').textContent = data.subfield_5_summary;
+            document.getElementById('subfield-6-title').textContent = data.subfield_6_title;
+            document.getElementById('subfield-6-summary').textContent = data.subfield_6_summary;
+            document.getElementById('subfield-7-title').textContent = data.subfield_7_title;
+            document.getElementById('subfield-7-summary').textContent = data.subfield_7_summary;
+            document.getElementById('subfield-8-title').textContent = data.subfield_8_title;
+            document.getElementById('subfield-8-summary').textContent = data.subfield_8_summary;
+            document.getElementById('subfield-9-title').textContent = data.subfield_9_title;
+            document.getElementById('subfield-9-summary').textContent = data.subfield_9_summary;
+            document.getElementById('subfield-10-title').textContent = data.subfield_10_title;
+            document.getElementById('subfield-10-summary').textContent = data.subfield_10_summary;
+            document.getElementById('subfield-11-title').textContent = data.subfield_11_title;
+            document.getElementById('subfield-11-summary').textContent = data.subfield_11_summary;
+            
+            currentLang = lang;
+        }
+
+        function toggleLanguage() {
+            const newLang = (currentLang === 'en' ? 'ar' : 'en');
+            applyTranslations(newLang);
+        }
+    </script>
+</body>
+</html>

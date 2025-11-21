@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Mosharafa | Zoology Field Details</title>
+    <link rel="icon" type="image/png" href="be_mosharafa.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cairo:wght@400;600;700&family=Rakkas&display=swap" rel="stylesheet">
+    
+    <style>
+        /* BASE STYLES */
+        body { font-family: 'Inter', sans-serif; }
+        .font-arabic { font-family: 'Cairo', sans-serif; }
+        .logo-arabic-font { font-family: 'Rakkas', cursive; }
+        
+        /* New page specific styling (Consistent with previous pages) */
+        .detail-card {
+            border-left: 4px solid #1f2937; /* Gray-800 for contrast */
+            transition: box-shadow 0.3s ease;
+        }
+        .rtl .detail-card {
+            border-left: none;
+            border-right: 4px solid #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <nav id="navbar" class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="be_mosharafa.png" alt="Be Mosharafa Logo" class="h-10 w-auto me-2">
+                    <span id="brand-name" class="font-bold text-xl tracking-tight text-gray-900">Be Mosharafa</span>
+                </div>
+                <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                    <button onclick="toggleLanguage()" class="flex items-center text-gray-600 hover:text-black border border-gray-300 px-3 py-1 rounded-md text-sm transition hover:bg-gray-100">
+                        <i class="fa-solid fa-globe me-2 text-gray-500"></i>
+                        <span id="lang-text" class="font-medium">العربية</span>
+                    </button>
+                    <button onclick="goToHome()" id="back-btn-nav" class="bg-black text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition duration-200 shadow-md">Back to Fields</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-24 pb-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="text-center mb-12">
+                <h1 id="main-title" class="text-5xl font-extrabold text-gray-900 mt-4 leading-tight">Zoology</h1>
+                <p id="page-subtitle" class="mt-2 text-xl text-gray-600">Animal Science Field Details</p>
+                <div class="inline-block mt-4 text-gray-500">
+                    <i class="fa-solid fa-paw text-5xl opacity-80"></i>
+                </div>
+            </header>
+
+            <div class="bg-white p-8 rounded-xl shadow-xl mb-16">
+                <h2 id="summary-heading" class="text-3xl font-bold text-gray-800 border-b border-gray-300 pb-3 mb-4">Field Summary</h2>
+                <p id="field-summary" class="text-lg text-gray-700 leading-relaxed">
+                    Zoology is the biological discipline dedicated to the **study of the animal kingdom**. It is a broad field encompassing the **classification, anatomy, physiology, behavior, evolution, and ecology of all animals**, both vertebrate and invertebrate. Zoologists work to understand the structure of animal life, the mechanisms that govern their survival and reproduction, and the role animals play in the natural world.
+                </p>
+            </div>
+            
+            <h2 id="subfields-heading" class="text-3xl font-bold text-gray-800 border-b-2 border-gray-300 pb-3 mb-6">Key Sub-Fields</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="subfields-grid">
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-1-title" class="text-2xl font-semibold text-gray-900">Animal Physiology</h3>
+                    <p id="subfield-1-summary" class="mt-2 text-gray-600">
+                        Studies the **mechanical, physical, and biochemical functions** of animals, including organs, tissues, and cells. This includes understanding processes like respiration, circulation, nervous system control, and how animals adapt to changing environments.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-2-title" class="text-2xl font-semibold text-gray-900">Animal Anatomy</h3>
+                    <p id="subfield-2-summary" class="mt-2 text-gray-600">
+                        The study of the **internal and external structure** of animals. It includes gross anatomy (visible structures) and microscopic anatomy (histology and cytology), providing the foundational structural knowledge for all other animal sciences.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-3-title" class="text-2xl font-semibold text-gray-900">Ethology</h3>
+                    <p id="subfield-3-summary" class="mt-2 text-gray-600">
+                        The scientific and objective study of **animal behavior** in natural conditions. It examines behaviors such as communication, migration, mating rituals, and social structure, often linking them to evolutionary advantage.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-4-title" class="text-2xl font-semibold text-gray-900">Animal Ecology</h3>
+                    <p id="subfield-4-summary" class="mt-2 text-gray-600">
+                        Focuses on the **interactions of animals with their biotic and abiotic environments**. It analyzes population dynamics, community structure, species distribution, and the flow of energy through food webs.
+                    </p>
+                </div>
+                
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-5-title" class="text-2xl font-semibold text-gray-900">Entomology</h3>
+                    <p id="subfield-5-summary" class="mt-2 text-gray-600">
+                        The specialized study of **insects**, which constitute the largest class in the animal kingdom. It is crucial for understanding pollination, pest control, disease transmission, and biodiversity conservation.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-6-title" class="text-2xl font-semibold text-gray-900">Ichthyology</h3>
+                    <p id="subfield-6-summary" class="mt-2 text-gray-600">
+                        The scientific study of **fish**, including bony fish, cartilaginous fish, and jawless fish. It covers their anatomy, behavior, ecology, and role in aquatic ecosystems and fisheries management.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-7-title" class="text-2xl font-semibold text-gray-900">Herpetology</h3>
+                    <p id="subfield-7-summary" class="mt-2 text-gray-600">
+                        Dedicated to the study of **amphibians** (frogs, salamanders) and **reptiles** (snakes, turtles, lizards). This field is critical for conservation efforts due to the high vulnerability of these groups to environmental change.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-8-title" class="text-2xl font-semibold text-gray-900">Mammalogy</h3>
+                    <p id="subfield-8-summary" class="mt-2 text-gray-600">
+                        The branch of zoology that focuses on the **class Mammalia**. It studies the anatomy, physiology, behavior, ecology, and evolution of mammals, including primates, whales, and rodents.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button onclick="goToHome()" id="back-btn-bottom" class="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition duration-200 shadow-md">Back to Home Page</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xl font-bold mb-4 logo-arabic-font">Be Mosharafa</h3>
+            <p class="text-sm text-gray-400">Zoology Exploration Page. &copy; 2025 Be Mosharafa.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Translation Data for Zoology Page ---
+        const translations = {
+            en: {
+                title: "Be Mosharafa | Zoology Field Details",
+                main_title: "Zoology",
+                subtitle: "Animal Science Field Details",
+                back_btn: "Back to Home Page",
+                summary_heading: "Field Summary",
+                
+                field_summary: "Zoology is the biological discipline dedicated to the study of the animal kingdom. It is a broad field encompassing the classification, anatomy, physiology, behavior, evolution, and ecology of all animals, both vertebrate and invertebrate. Zoologists work to understand the structure of animal life, the mechanisms that govern their survival and reproduction, and the role animals play in the natural world.",
+                
+                subfields_heading: "Key Sub-Fields",
+
+                subfield_1_title: "Animal Physiology",
+                subfield_1_summary: "Studies the mechanical, physical, and biochemical functions of animals, including organs, tissues, and cells. This includes understanding processes like respiration, circulation, nervous system control, and how animals adapt to changing environments.",
+                
+                subfield_2_title: "Animal Anatomy",
+                subfield_2_summary: "The study of the internal and external structure of animals. It includes gross anatomy (visible structures) and microscopic anatomy (histology and cytology), providing the foundational structural knowledge for all other animal sciences.",
+                
+                subfield_3_title: "Ethology",
+                subfield_3_summary: "The scientific and objective study of animal behavior in natural conditions. It examines behaviors such as communication, migration, mating rituals, and social structure, often linking them to evolutionary advantage.",
+
+                subfield_4_title: "Animal Ecology",
+                subfield_4_summary: "Focuses on the interactions of animals with their biotic and abiotic environments. It analyzes population dynamics, community structure, species distribution, and the flow of energy through food webs.",
+                
+                subfield_5_title: "Entomology",
+                subfield_5_summary: "The specialized study of insects, which constitute the largest class in the animal kingdom. It is crucial for understanding pollination, pest control, disease transmission, and biodiversity conservation.",
+
+                subfield_6_title: "Ichthyology",
+                subfield_6_summary: "The scientific study of fish, including bony fish, cartilaginous fish, and jawless fish. It covers their anatomy, behavior, ecology, and role in aquatic ecosystems and fisheries management.",
+
+                subfield_7_title: "Herpetology",
+                subfield_7_summary: "Dedicated to the study of amphibians (frogs, salamanders) and reptiles (snakes, turtles, lizards). This field is critical for conservation efforts due to the high vulnerability of these groups to environmental change.",
+
+                subfield_8_title: "Mammalogy",
+                subfield_8_summary: "The branch of zoology that focuses on the class Mammalia. It studies the anatomy, physiology, behavior, ecology, and evolution of mammals, including primates, whales, and rodents.",
+
+                lang_text: "العربية"
+            },
+            ar: {
+                title: "كُن مُشرفة | تفاصيل تخصص علم الحيوان",
+                main_title: "علم الحيوان",
+                subtitle: "تفاصيل مجال العلوم الحيوانية",
+                back_btn: "العودة إلى الصفحة الرئيسية",
+                summary_heading: "ملخص التخصص",
+                
+                field_summary: "علم الحيوان هو التخصص البيولوجي المكرس لدراسة المملكة الحيوانية. وهو مجال واسع يشمل تصنيف وتشريح ووظائف وسلوك وتطور وبيئة جميع الحيوانات، سواء الفقارية أو اللافقارية. يعمل علماء الحيوان على فهم هيكل الحياة الحيوانية، والآليات التي تحكم بقاءها وتكاثرها، والدور الذي تلعبه الحيوانات في العالم الطبيعي.",
+                
+                subfields_heading: "التخصصات الفرعية الرئيسية",
+
+                subfield_1_title: "وظائف الأعضاء الحيوانية",
+                subfield_1_summary: "يدرس الوظائف الميكانيكية والفيزيائية والكيميائية الحيوية للحيوانات، بما في ذلك الأعضاء والأنسجة والخلايا. ويشمل ذلك فهم عمليات مثل التنفس والدورة الدموية والتحكم في الجهاز العصبي، وكيف تتكيف الحيوانات مع البيئات المتغيرة.",
+                
+                subfield_2_title: "تشريح الحيوان",
+                subfield_2_summary: "دراسة التركيب الداخلي والخارجي للحيوانات. يشمل التشريح الإجمالي (الهياكل المرئية) والتشريح المجهري (علم الأنسجة وعلم الخلايا)، مما يوفر المعرفة الهيكلية الأساسية لجميع العلوم الحيوانية الأخرى.",
+                
+                subfield_3_title: "علم السلوك (الإيثولوجيا)",
+                subfield_3_summary: "الدراسة العلمية والموضوعية لسلوك الحيوان في الظروف الطبيعية. يدرس سلوكيات مثل التواصل والهجرة وطقوس التزاوج والبنية الاجتماعية، وغالباً ما يربطها بالميزة التطورية.",
+
+                subfield_4_title: "علم البيئة الحيوانية",
+                subfield_4_summary: "يركز على تفاعلات الحيوانات مع بيئاتها الحية وغير الحية. يحلل ديناميكيات السكان، وهيكل المجتمع، وتوزيع الأنواع، وتدفق الطاقة عبر شبكات الغذاء.",
+                
+                subfield_5_title: "علم الحشرات",
+                subfield_5_summary: "الدراسة المتخصصة للحشرات، التي تشكل أكبر فئة في المملكة الحيوانية. وهي حاسمة لفهم التلقيح ومكافحة الآفات ونقل الأمراض والحفاظ على التنوع البيولوجي.",
+
+                subfield_6_title: "علم الأسماك",
+                subfield_6_summary: "الدراسة العلمية للأسماك، بما في ذلك الأسماك العظمية والغضروفية والأسماك عديمة الفك. يغطي تشريحها وسلوكها وبيئتها ودورها في النظم الإيكولوجية المائية وإدارة مصائد الأسماك.",
+
+                subfield_7_title: "علم الزواحف والبرمائيات",
+                subfield_7_summary: "مخصص لدراسة البرمائيات (الضفادع، السمندل) والزواحف (الثعابين، السلاحف، السحالي). هذا المجال حيوي لجهود الحفاظ على البيئة نظراً للضعف الشديد لهذه المجموعات تجاه التغير البيئي.",
+
+                subfield_8_title: "علم الثدييات",
+                subfield_8_summary: "فرع من علم الحيوان يركز على فئة الثدييات. يدرس تشريح ووظائف وسلوك وبيئة وتطور الثدييات، بما في ذلك الرئيسيات والحيتان والقوارض.",
+
+                lang_text: "English"
+            }
+        };
+
+        let currentLang = 'en';
+
+        // --- Core Functions ---
+        // This function explicitly sends the user back to the assumed home file (index.html)
+        function goToHome() {
+            // NOTE: Replace 'index.html' with the actual filename of your main home page if it is different.
+            window.location.href = 'be_mosharafa.html'; 
+        }
+
+        // Initialize language settings on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            currentLang = 'en';
+            applyTranslations('en');
+        });
+
+        function applyTranslations(lang) {
+            const data = translations[lang];
+            const htmlTag = document.documentElement;
+            const body = document.body;
+
+            // Set global direction and font
+            htmlTag.lang = lang;
+            htmlTag.dir = (lang === 'ar' ? 'rtl' : 'ltr');
+            
+            if (lang === 'ar') {
+                body.classList.add('font-arabic');
+                body.classList.add('rtl');
+            } else {
+                body.classList.remove('font-arabic');
+                body.classList.remove('rtl');
+            }
+            
+            // Apply text translations
+            document.title = data.title;
+            document.getElementById('lang-text').textContent = data.lang_text;
+            
+            // Apply text to the two back buttons
+            document.getElementById('back-btn-nav').textContent = data.back_btn;
+            document.getElementById('back-btn-bottom').textContent = data.back_btn;
+
+            document.getElementById('main-title').textContent = data.main_title;
+            document.getElementById('page-subtitle').textContent = data.subtitle;
+            document.getElementById('summary-heading').textContent = data.summary_heading;
+            document.getElementById('field-summary').textContent = data.field_summary;
+            document.getElementById('subfields-heading').textContent = data.subfields_heading;
+
+            // Sub-field translations (8 fields)
+            document.getElementById('subfield-1-title').textContent = data.subfield_1_title;
+            document.getElementById('subfield-1-summary').textContent = data.subfield_1_summary;
+            document.getElementById('subfield-2-title').textContent = data.subfield_2_title;
+            document.getElementById('subfield-2-summary').textContent = data.subfield_2_summary;
+            document.getElementById('subfield-3-title').textContent = data.subfield_3_title;
+            document.getElementById('subfield-3-summary').textContent = data.subfield_3_summary;
+            document.getElementById('subfield-4-title').textContent = data.subfield_4_title;
+            document.getElementById('subfield-4-summary').textContent = data.subfield_4_summary;
+            document.getElementById('subfield-5-title').textContent = data.subfield_5_title;
+            document.getElementById('subfield-5-summary').textContent = data.subfield_5_summary;
+            document.getElementById('subfield-6-title').textContent = data.subfield_6_title;
+            document.getElementById('subfield-6-summary').textContent = data.subfield_6_summary;
+            document.getElementById('subfield-7-title').textContent = data.subfield_7_title;
+            document.getElementById('subfield-7-summary').textContent = data.subfield_7_summary;
+            document.getElementById('subfield-8-title').textContent = data.subfield_8_title;
+            document.getElementById('subfield-8-summary').textContent = data.subfield_8_summary;
+            
+            currentLang = lang;
+        }
+
+        function toggleLanguage() {
+            const newLang = (currentLang === 'en' ? 'ar' : 'en');
+            applyTranslations(newLang);
+        }
+    </script>
+</body>
+</html>

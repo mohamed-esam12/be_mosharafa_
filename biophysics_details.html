@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Mosharafa | Biophysics Field Details</title>
+    <link rel="icon" type="image/png" href="be_mosharafa.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cairo:wght@400;600;700&family=Rakkas&display=swap" rel="stylesheet">
+    
+    <style>
+        /* BASE STYLES */
+        body { font-family: 'Inter', sans-serif; }
+        .font-arabic { font-family: 'Cairo', sans-serif; }
+        .logo-arabic-font { font-family: 'Rakkas', cursive; }
+        
+        /* New page specific styling (Consistent with previous pages) */
+        .detail-card {
+            border-left: 4px solid #1f2937; /* Gray-800 for contrast */
+            transition: box-shadow 0.3s ease;
+        }
+        .rtl .detail-card {
+            border-left: none;
+            border-right: 4px solid #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <nav id="navbar" class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="be_mosharafa.png" alt="Be Mosharafa Logo" class="h-10 w-auto me-2">
+                    <span id="brand-name" class="font-bold text-xl tracking-tight text-gray-900">Be Mosharafa</span>
+                </div>
+                <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                    <button onclick="toggleLanguage()" class="flex items-center text-gray-600 hover:text-black border border-gray-300 px-3 py-1 rounded-md text-sm transition hover:bg-gray-100">
+                        <i class="fa-solid fa-globe me-2 text-gray-500"></i>
+                        <span id="lang-text" class="font-medium">العربية</span>
+                    </button>
+                    <button onclick="goToHome()" id="back-btn-nav" class="bg-black text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition duration-200 shadow-md">Back to Fields</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-24 pb-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="text-center mb-12">
+                <h1 id="main-title" class="text-5xl font-extrabold text-gray-900 mt-4 leading-tight">Biophysics</h1>
+                <p id="page-subtitle" class="mt-2 text-xl text-gray-600">Interdisciplinary Science Field Details</p>
+                <div class="inline-block mt-4 text-gray-500">
+                    <i class="fa-solid fa-shield-virus text-5xl opacity-80"></i>
+                </div>
+            </header>
+
+            <div class="bg-white p-8 rounded-xl shadow-xl mb-16">
+                <h2 id="summary-heading" class="text-3xl font-bold text-gray-800 border-b border-gray-300 pb-3 mb-4">Field Summary</h2>
+                <p id="field-summary" class="text-lg text-gray-700 leading-relaxed">
+                    Biophysics is the interdisciplinary science that **applies theories and methods of physics to study biological systems**. It seeks to understand how biological molecules work, how cells function mechanistically, and how energy is transduced in living organisms. By viewing life as a physical system, biophysics provides quantitative explanations for biological processes, from the folding of proteins to the propagation of nerve impulses.
+                </p>
+            </div>
+            
+            <h2 id="subfields-heading" class="text-3xl font-bold text-gray-800 border-b-2 border-gray-300 pb-3 mb-6">Key Sub-Fields</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="subfields-grid">
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card md:col-span-1">
+                    <h3 id="subfield-1-title" class="text-2xl font-semibold text-gray-900">Molecular Biophysics</h3>
+                    <p id="subfield-1-summary" class="mt-2 text-gray-600">
+                        Focuses on the **structure, dynamics, and interactions of biological macromolecules** (like DNA, RNA, and proteins). It uses techniques such as X-ray crystallography and cryo-electron microscopy to understand how a protein's physical shape dictates its function within the cell.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card md:col-span-1">
+                    <h3 id="subfield-2-title" class="text-2xl font-semibold text-gray-900">Cellular Biophysics</h3>
+                    <p id="subfield-2-summary" class="mt-2 text-gray-600">
+                        Examines the **mechanical and electrical properties of cells and tissues**. This includes studying the **fluidity of cell membranes**, the physical forces involved in cell division and migration, and the electrical signals responsible for nerve and muscle function.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card md:col-span-2">
+                    <h3 id="subfield-3-title" class="text-2xl font-semibold text-gray-900">Medical & Radiation Biophysics</h3>
+                    <p id="subfield-3-summary" class="mt-2 text-gray-600">
+                        Applies physical principles to **medical technology, diagnosis, and treatment**. This involves the physics behind medical imaging (MRI, PET scans), the study of how **radiation affects biological tissue** (radiotherapy), and the development of new biosensors and diagnostic devices.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button onclick="goToHome()" id="back-btn-bottom" class="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition duration-200 shadow-md">Back to Home Page</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xl font-bold mb-4 logo-arabic-font">Be Mosharafa</h3>
+            <p class="text-sm text-gray-400">Biophysics Exploration Page. &copy; 2025 Be Mosharafa.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Translation Data for Biophysics Page ---
+        const translations = {
+            en: {
+                title: "Be Mosharafa | Biophysics Field Details",
+                main_title: "Biophysics",
+                subtitle: "Interdisciplinary Science Field Details",
+                back_btn: "Back to Home Page",
+                summary_heading: "Field Summary",
+                
+                field_summary: "Biophysics is the interdisciplinary science that applies theories and methods of physics to study biological systems. It seeks to understand how biological molecules work, how cells function mechanistically, and how energy is transduced in living organisms. By viewing life as a physical system, biophysics provides quantitative explanations for biological processes, from the folding of proteins to the propagation of nerve impulses.",
+                
+                subfields_heading: "Key Sub-Fields",
+
+                subfield_1_title: "Molecular Biophysics",
+                subfield_1_summary: "Focuses on the structure, dynamics, and interactions of biological macromolecules (like DNA, RNA, and proteins). It uses techniques such as X-ray crystallography and cryo-electron microscopy to understand how a protein's physical shape dictates its function within the cell.",
+                
+                subfield_2_title: "Cellular Biophysics",
+                subfield_2_summary: "Examines the mechanical and electrical properties of cells and tissues. This includes studying the fluidity of cell membranes, the physical forces involved in cell division and migration, and the electrical signals responsible for nerve and muscle function.",
+                
+                subfield_3_title: "Medical & Radiation Biophysics",
+                subfield_3_summary: "Applies physical principles to medical technology, diagnosis, and treatment. This involves the physics behind medical imaging (MRI, PET scans), the study of how radiation affects biological tissue (radiotherapy), and the development of new biosensors and diagnostic devices.",
+                
+                lang_text: "العربية"
+            },
+            ar: {
+                title: "كُن مُشرفة | تفاصيل تخصص الفيزياء الحيوية",
+                main_title: "الفيزياء الحيوية",
+                subtitle: "تفاصيل مجال العلوم متعددة التخصصات",
+                back_btn: "العودة إلى الصفحة الرئيسية",
+                summary_heading: "ملخص التخصص",
+                
+                field_summary: "الفيزياء الحيوية هي علم متعدد التخصصات يطبق نظريات ومنهجيات الفيزياء لدراسة الأنظمة البيولوجية. يسعى إلى فهم كيفية عمل الجزيئات البيولوجية، وكيفية أداء الخلايا لوظائفها ميكانيكياً، وكيفية نقل الطاقة في الكائنات الحية. من خلال النظر إلى الحياة كنظام فيزيائي، يوفر علم الفيزياء الحيوية تفسيرات كمية للعمليات البيولوجية، بدءاً من طي البروتينات وصولاً إلى انتشار النبضات العصبية.",
+                
+                subfields_heading: "التخصصات الفرعية الرئيسية",
+
+                subfield_1_title: "الفيزياء الحيوية الجزيئية",
+                subfield_1_summary: "يركز على بنية وديناميكيات وتفاعلات الجزيئات البيولوجية الكبيرة (مثل الحمض النووي (DNA) والحمض النووي الريبي (RNA) والبروتينات). يستخدم تقنيات مثل حيود الأشعة السينية والمجهر الإلكتروني بالتبريد لفهم كيف يشكل البروتين المادي وظيفته داخل الخلية.",
+                
+                subfield_2_title: "الفيزياء الحيوية الخلوية",
+                subfield_2_summary: "يفحص الخصائص الميكانيكية والكهربائية للخلايا والأنسجة. يشمل ذلك دراسة سيولة أغشية الخلايا، والقوى الفيزيائية المشاركة في انقسام الخلايا وهجرتها، والإشارات الكهربائية المسؤولة عن وظيفة الأعصاب والعضلات.",
+                
+                subfield_3_title: "الفيزياء الحيوية الطبية والإشعاعية",
+                subfield_3_summary: "يطبق المبادئ الفيزيائية على التكنولوجيا الطبية والتشخيص والعلاج. يشمل ذلك الفيزياء الكامنة وراء التصوير الطبي (الرنين المغناطيسي، مسح PET)، ودراسة كيفية تأثير الإشعاع على الأنسجة البيولوجية (العلاج الإشعاعي)، وتطوير أجهزة الاستشعار البيولوجية وأجهزة التشخيص الجديدة.",
+                
+                lang_text: "English"
+            }
+        };
+
+        let currentLang = 'en';
+
+        // --- Core Functions ---
+        // This function explicitly sends the user back to the assumed home file (index.html)
+        function goToHome() {
+            // NOTE: Replace 'index.html' with the actual filename of your main home page if it is different.
+            window.location.href = 'be_mosharafa.html'; 
+        }
+
+        // Initialize language settings on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            currentLang = 'en';
+            applyTranslations('en');
+        });
+
+        function applyTranslations(lang) {
+            const data = translations[lang];
+            const htmlTag = document.documentElement;
+            const body = document.body;
+
+            // Set global direction and font
+            htmlTag.lang = lang;
+            htmlTag.dir = (lang === 'ar' ? 'rtl' : 'ltr');
+            
+            if (lang === 'ar') {
+                body.classList.add('font-arabic');
+                body.classList.add('rtl');
+            } else {
+                body.classList.remove('font-arabic');
+                body.classList.remove('rtl');
+            }
+            
+            // Apply text translations
+            document.title = data.title;
+            document.getElementById('lang-text').textContent = data.lang_text;
+            
+            // Apply text to the two back buttons
+            document.getElementById('back-btn-nav').textContent = data.back_btn;
+            document.getElementById('back-btn-bottom').textContent = data.back_btn;
+
+            document.getElementById('main-title').textContent = data.main_title;
+            document.getElementById('page-subtitle').textContent = data.subtitle;
+            document.getElementById('summary-heading').textContent = data.summary_heading;
+            document.getElementById('field-summary').textContent = data.field_summary;
+            document.getElementById('subfields-heading').textContent = data.subfields_heading;
+
+            // Sub-field translations (3 fields)
+            document.getElementById('subfield-1-title').textContent = data.subfield_1_title;
+            document.getElementById('subfield-1-summary').textContent = data.subfield_1_summary;
+            document.getElementById('subfield-2-title').textContent = data.subfield_2_title;
+            document.getElementById('subfield-2-summary').textContent = data.subfield_2_summary;
+            document.getElementById('subfield-3-title').textContent = data.subfield_3_title;
+            document.getElementById('subfield-3-summary').textContent = data.subfield_3_summary;
+            
+            currentLang = lang;
+        }
+
+        function toggleLanguage() {
+            const newLang = (currentLang === 'en' ? 'ar' : 'en');
+            applyTranslations(newLang);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Mosharafa | Chemistry Field Details</title>
+    <link rel="icon" type="image/png" href="be_mosharafa.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cairo:wght@400;600;700&family=Rakkas&display=swap" rel="stylesheet">
+    
+    <style>
+        /* BASE STYLES */
+        body { font-family: 'Inter', sans-serif; }
+        .font-arabic { font-family: 'Cairo', sans-serif; }
+        .logo-arabic-font { font-family: 'Rakkas', cursive; }
+        
+        /* --- PROFESSIONAL UI/UX TWEAKS --- */
+        .detail-card {
+            border-left: 4px solid #1f2937; /* Gray-800 for contrast */
+            transition: box-shadow 0.3s ease;
+        }
+        .rtl .detail-card {
+            border-left: none;
+            border-right: 4px solid #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <nav id="navbar" class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="be_mosharafa.png" alt="Be Mosharafa Logo" class="h-10 w-auto me-2">
+                    <span id="brand-name" class="font-bold text-xl tracking-tight text-gray-900">Be Mosharafa</span>
+                </div>
+                <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                    <button onclick="toggleLanguage()" class="flex items-center text-gray-600 hover:text-black border border-gray-300 px-3 py-1 rounded-md text-sm transition hover:bg-gray-100">
+                        <i class="fa-solid fa-globe me-2 text-gray-500"></i>
+                        <span id="lang-text" class="font-medium">العربية</span>
+                    </button>
+                    <button onclick="goToHome()" id="back-btn-nav" class="bg-black text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition duration-200 shadow-md">Back to Fields</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-24 pb-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="text-center mb-12">
+                <h1 id="main-title" class="text-5xl font-extrabold text-gray-900 mt-4 leading-tight">Chemistry</h1>
+                <p id="page-subtitle" class="mt-2 text-xl text-gray-600">The Central Science Field Details</p>
+                <div class="inline-block mt-4 text-gray-500">
+                    <i class="fa-solid fa-flask text-5xl opacity-80"></i>
+                </div>
+            </header>
+
+            <div class="bg-white p-8 rounded-xl shadow-xl mb-16">
+                <h2 id="summary-heading" class="text-3xl font-bold text-gray-800 border-b border-gray-300 pb-3 mb-4">Field Summary</h2>
+                <p id="field-summary" class="text-lg text-gray-700 leading-relaxed">
+                    Chemistry is the **central science** that investigates the composition, structure, properties, and change of **matter** at the atomic and molecular level. It studies the chemical elements and compounds, the bonds between atoms, and the transfer of energy during chemical reactions. Chemistry is fundamentally linked to all other natural sciences, as chemical processes govern everything from **biological function** to **planetary climate** and **material engineering**.
+                </p>
+            </div>
+            
+            <h2 id="subfields-heading" class="text-3xl font-bold text-gray-800 border-b-2 border-gray-300 pb-3 mb-6">Key Sub-Fields</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="subfields-grid">
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-1-title" class="text-2xl font-semibold text-gray-900">Analytical Chemistry</h3>
+                    <p id="subfield-1-summary" class="mt-2 text-gray-600">
+                        Concerned with the **identification, separation, and quantification** of chemical substances. It answers two key questions: "**What is in it?**" (qualitative analysis) and "**How much?**" (quantitative analysis), using advanced techniques like chromatography and spectroscopy.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-2-title" class="text-2xl font-semibold text-gray-900">Thermochemistry</h3>
+                    <p id="subfield-2-summary" class="mt-2 text-gray-600">
+                        A core area of Physical Chemistry that focuses exclusively on the **heat and energy changes** associated with chemical reactions and physical transformations (e.g., phase changes). It uses principles of **thermodynamics** to predict reaction spontaneity and stability.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-3-title" class="text-2xl font-semibold text-gray-900">Organic Chemistry</h3>
+                    <p id="subfield-3-summary" class="mt-2 text-gray-600">
+                        The study of the **structure, properties, and reactions of compounds containing carbon**—the backbone of all life. This field is essential for pharmaceutical development, petrochemicals, and the synthesis of polymers and advanced materials.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-4-title" class="text-2xl font-semibold text-gray-900">Inorganic Chemistry</h3>
+                    <p id="subfield-4-summary" class="mt-2 text-gray-600">
+                        Focuses on the synthesis and behavior of **inorganic compounds**, including salts, metals, and minerals—everything **excluding carbon-hydrogen bonds**. It is vital for catalysis, materials science (ceramics, superconductors), and geo- and environmental chemistry.
+                    </p>
+                </div>
+                
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-5-title" class="text-2xl font-semibold text-gray-900">Biochemistry</h3>
+                    <p id="subfield-5-summary" class="mt-2 text-gray-600">
+                        The study of the **chemistry of living organisms**, including the structure and function of biological macromolecules (proteins, carbohydrates, lipids, nucleic acids). It explores the chemical reactions that occur within cells, forming the basis of molecular biology and medicine.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-6-title" class="text-2xl font-semibold text-gray-900">Quantum Chemistry</h3>
+                    <p id="subfield-6-summary" class="mt-2 text-gray-600">
+                        A branch of theoretical chemistry that **applies quantum mechanics** to chemical problems, providing the fundamental understanding of chemical bonding, molecular structure, and reactivity. It predicts electron behavior using complex mathematical models.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-7-title" class="text-2xl font-semibold text-gray-900">Nuclear Chemistry</h3>
+                    <p id="subfield-7-summary" class="mt-2 text-gray-600">
+                        Deals with **radioactivity, nuclear processes, and transformations** in atomic nuclei (fission and fusion). Applications include radioisotope dating, medical imaging (PET scans), and the chemistry of nuclear power generation and waste disposal.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button onclick="goToHome()" id="back-btn-bottom" class="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition duration-200 shadow-md">Back to Home Page</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xl font-bold mb-4 logo-arabic-font">Be Mosharafa</h3>
+            <p class="text-sm text-gray-400">Chemistry Exploration Page. &copy; 2025 Be Mosharafa.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Translation Data for Chemistry Page ---
+        const translations = {
+            en: {
+                title: "Be Mosharafa | Chemistry Field Details",
+                main_title: "Chemistry",
+                subtitle: "The Central Science Field Details",
+                back_btn: "Back to Home Page",
+                summary_heading: "Field Summary",
+                
+                field_summary: "Chemistry is the central science that investigates the composition, structure, properties, and change of matter at the atomic and molecular level. It studies the chemical elements and compounds, the bonds between atoms, and the transfer of energy during chemical reactions. Chemistry is fundamentally linked to all other natural sciences, as chemical processes govern everything from biological function to planetary climate and material engineering.",
+                
+                subfields_heading: "Key Sub-Fields",
+
+                subfield_1_title: "Analytical Chemistry",
+                subfield_1_summary: "Concerned with the identification, separation, and quantification of chemical substances. It answers two key questions: 'What is in it?' (qualitative analysis) and 'How much?' (quantitative analysis), using advanced techniques like chromatography and spectroscopy.",
+                
+                subfield_2_title: "Thermochemistry",
+                subfield_2_summary: "A core area of Physical Chemistry that focuses exclusively on the heat and energy changes associated with chemical reactions and physical transformations (e.g., phase changes). It uses principles of thermodynamics to predict reaction spontaneity and stability.",
+                
+                subfield_3_title: "Organic Chemistry",
+                subfield_3_summary: "The study of the structure, properties, and reactions of compounds containing carbon—the backbone of all life. This field is essential for pharmaceutical development, petrochemicals, and the synthesis of polymers and advanced materials.",
+
+                subfield_4_title: "Inorganic Chemistry",
+                subfield_4_summary: "Focuses on the synthesis and behavior of inorganic compounds, including salts, metals, and minerals—everything excluding carbon-hydrogen bonds. It is vital for catalysis, materials science (ceramics, superconductors), and geo- and environmental chemistry.",
+                
+                subfield_5_title: "Biochemistry",
+                subfield_5_summary: "The study of the chemistry of living organisms, including the structure and function of biological macromolecules (proteins, carbohydrates, lipids, nucleic acids). It explores the chemical reactions that occur within cells, forming the basis of molecular biology and medicine.",
+
+                subfield_6_title: "Quantum Chemistry",
+                subfield_6_summary: "A branch of theoretical chemistry that applies quantum mechanics to chemical problems, providing the fundamental understanding of chemical bonding, molecular structure, and reactivity. It predicts electron behavior using complex mathematical models.",
+
+                subfield_7_title: "Nuclear Chemistry",
+                subfield_7_summary: "Deals with radioactivity, nuclear processes, and transformations in atomic nuclei (fission and fusion). Applications include radioisotope dating, medical imaging (PET scans), and the chemistry of nuclear power generation and waste disposal.",
+
+                lang_text: "العربية"
+            },
+            ar: {
+                title: "كُن مُشرفة | تفاصيل تخصص الكيمياء",
+                main_title: "الكيمياء",
+                subtitle: "تفاصيل مجال العلوم المركزية",
+                back_btn: "العودة إلى الصفحة الرئيسية",
+                summary_heading: "ملخص التخصص",
+                
+                field_summary: "الكيمياء هي العلم المركزي الذي يحقق في تكوين وتركيب وخصائص وتغير المادة على المستوى الذري والجزيئي. تدرس العناصر والمركبات الكيميائية، والروابط بين الذرات، ونقل الطاقة أثناء التفاعلات الكيميائية. ترتبط الكيمياء ارتباطًا أساسيًا بجميع العلوم الطبيعية الأخرى، حيث تحكم العمليات الكيميائية كل شيء بدءاً من الوظائف البيولوجية وصولاً إلى مناخ الكواكب وهندسة المواد.",
+                
+                subfields_heading: "التخصصات الفرعية الرئيسية",
+
+                subfield_1_title: "الكيمياء التحليلية",
+                subfield_1_summary: "تهتم بتحديد وفصل وقياس كمية المواد الكيميائية. تجيب على سؤالين رئيسيين: 'ماذا يوجد في العينة؟' (التحليل النوعي) و 'كم الكمية؟' (التحليل الكمي)، باستخدام تقنيات متقدمة مثل اللونيّة والتحليل الطيفي.",
+                
+                subfield_2_title: "الكيمياء الحرارية",
+                subfield_2_summary: "مجال أساسي في الكيمياء الفيزيائية يركز حصرياً على تغيرات الحرارة والطاقة المرتبطة بالتفاعلات الكيميائية والتحولات الفيزيائية (مثل تغيرات الطور). يستخدم مبادئ الديناميكا الحرارية للتنبؤ بعفوية التفاعل واستقراره.",
+                
+                subfield_3_title: "الكيمياء العضوية",
+                subfield_3_summary: "دراسة تركيب وخصائص وتفاعلات المركبات المحتوية على الكربون - العمود الفقري للحياة كلها. هذا المجال أساسي لتطوير الأدوية، والبتروكيماويات، وتخليق البوليمرات والمواد المتقدمة.",
+
+                subfield_4_title: "الكيمياء غير العضوية",
+                subfield_4_summary: "تركز على تخليق وسلوك المركبات غير العضوية، بما في ذلك الأملاح والمعادن والفلزات - كل شيء باستثناء الروابط الكربونية-الهيدروجينية. وهي حيوية للحفز، وعلوم المواد (السيراميك، الموصلات الفائقة)، والكيمياء الجيولوجية والبيئية.",
+                
+                subfield_5_title: "الكيمياء الحيوية",
+                subfield_5_summary: "دراسة كيمياء الكائنات الحية، بما في ذلك تركيب ووظيفة الجزيئات البيولوجية الكبيرة (البروتينات، الكربوهيدرات، الدهون، الأحماض النووية). تستكشف التفاعلات الكيميائية التي تحدث داخل الخلايا، وتشكل أساس البيولوجيا الجزيئية والطب.",
+
+                subfield_6_title: "كيمياء الكم",
+                subfield_6_summary: "فرع من الكيمياء النظرية يطبق ميكانيكا الكم على المشكلات الكيميائية، مما يوفر الفهم الأساسي للروابط الكيميائية، والتركيب الجزيئي، وقابلية التفاعل. يتنبأ بسلوك الإلكترونات باستخدام نماذج رياضية معقدة.",
+
+                subfield_7_title: "الكيمياء النووية",
+                subfield_7_summary: "تتعامل مع النشاط الإشعاعي والعمليات والتحولات النووية في النوى الذرية (الانشطار والاندماج). تشمل التطبيقات التأريخ بالنظائر المشعة، والتصوير الطبي (مسح PET)، وكيمياء توليد الطاقة النووية والتخلص من النفايات.",
+
+                lang_text: "English"
+            }
+        };
+
+        let currentLang = 'en';
+
+        // --- Core Functions ---
+        // This function explicitly sends the user back to the assumed home file (index.html)
+        function goToHome() {
+            // NOTE: Replace 'index.html' with the actual filename of your main home page if it is different.
+            window.location.href = 'be_mosharafa.html'; 
+        }
+
+        // Initialize language settings on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            currentLang = 'en';
+            applyTranslations('en');
+        });
+
+        function applyTranslations(lang) {
+            const data = translations[lang];
+            const htmlTag = document.documentElement;
+            const body = document.body;
+
+            // Set global direction and font
+            htmlTag.lang = lang;
+            htmlTag.dir = (lang === 'ar' ? 'rtl' : 'ltr');
+            
+            if (lang === 'ar') {
+                body.classList.add('font-arabic');
+                body.classList.add('rtl');
+            } else {
+                body.classList.remove('font-arabic');
+                body.classList.remove('rtl');
+            }
+            
+            // Apply text translations
+            document.title = data.title;
+            document.getElementById('lang-text').textContent = data.lang_text;
+            
+            // Apply text to the two back buttons
+            document.getElementById('back-btn-nav').textContent = data.back_btn;
+            document.getElementById('back-btn-bottom').textContent = data.back_btn;
+
+            document.getElementById('main-title').textContent = data.main_title;
+            document.getElementById('page-subtitle').textContent = data.subtitle;
+            document.getElementById('summary-heading').textContent = data.summary_heading;
+            document.getElementById('field-summary').textContent = data.field_summary;
+            document.getElementById('subfields-heading').textContent = data.subfields_heading;
+
+            // Sub-field translations (7 fields)
+            document.getElementById('subfield-1-title').textContent = data.subfield_1_title;
+            document.getElementById('subfield-1-summary').textContent = data.subfield_1_summary;
+            document.getElementById('subfield-2-title').textContent = data.subfield_2_title;
+            document.getElementById('subfield-2-summary').textContent = data.subfield_2_summary;
+            document.getElementById('subfield-3-title').textContent = data.subfield_3_title;
+            document.getElementById('subfield-3-summary').textContent = data.subfield_3_summary;
+            document.getElementById('subfield-4-title').textContent = data.subfield_4_title;
+            document.getElementById('subfield-4-summary').textContent = data.subfield_4_summary;
+            document.getElementById('subfield-5-title').textContent = data.subfield_5_title;
+            document.getElementById('subfield-5-summary').textContent = data.subfield_5_summary;
+            document.getElementById('subfield-6-title').textContent = data.subfield_6_title;
+            document.getElementById('subfield-6-summary').textContent = data.subfield_6_summary;
+            document.getElementById('subfield-7-title').textContent = data.subfield_7_title;
+            document.getElementById('subfield-7-summary').textContent = data.subfield_7_summary;
+            
+            currentLang = lang;
+        }
+
+        function toggleLanguage() {
+            const newLang = (currentLang === 'en' ? 'ar' : 'en');
+            applyTranslations(newLang);
+        }
+    </script>
+</body>
+</html>

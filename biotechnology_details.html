@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Mosharafa | Biotechnology Field Details</title>
+    <link rel="icon" type="image/png" href="be_mosharafa.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cairo:wght@400;600;700&family=Rakkas&display=swap" rel="stylesheet">
+    
+    <style>
+        /* BASE STYLES */
+        body { font-family: 'Inter', sans-serif; }
+        .font-arabic { font-family: 'Cairo', sans-serif; }
+        .logo-arabic-font { font-family: 'Rakkas', cursive; }
+        
+        /* New page specific styling (Consistent with previous pages) */
+        .detail-card {
+            border-left: 4px solid #1f2937; /* Gray-800 for contrast */
+            transition: box-shadow 0.3s ease;
+        }
+        .rtl .detail-card {
+            border-left: none;
+            border-right: 4px solid #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <nav id="navbar" class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="be_mosharafa.png" alt="Be Mosharafa Logo" class="h-10 w-auto me-2">
+                    <span id="brand-name" class="font-bold text-xl tracking-tight text-gray-900">Be Mosharafa</span>
+                </div>
+                <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                    <button onclick="toggleLanguage()" class="flex items-center text-gray-600 hover:text-black border border-gray-300 px-3 py-1 rounded-md text-sm transition hover:bg-gray-100">
+                        <i class="fa-solid fa-globe me-2 text-gray-500"></i>
+                        <span id="lang-text" class="font-medium">العربية</span>
+                    </button>
+                    <button onclick="goToHome()" id="back-btn-nav" class="bg-black text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition duration-200 shadow-md">Back to Fields</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-24 pb-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="text-center mb-12">
+                <h1 id="main-title" class="text-5xl font-extrabold text-gray-900 mt-4 leading-tight">Biotechnology</h1>
+                <p id="page-subtitle" class="mt-2 text-xl text-gray-600">Applied Life Science Field Details</p>
+                <div class="inline-block mt-4 text-gray-500">
+                    <i class="fa-solid fa-microscope text-5xl opacity-80"></i>
+                </div>
+            </header>
+
+            <div class="bg-white p-8 rounded-xl shadow-xl mb-16">
+                <h2 id="summary-heading" class="text-3xl font-bold text-gray-800 border-b border-gray-300 pb-3 mb-4">Field Summary</h2>
+                <p id="field-summary" class="text-lg text-gray-700 leading-relaxed">
+                    Biotechnology is the use of **living systems, organisms, or derivatives thereof**, to develop or create products and processes for specific uses. It integrates molecular biology, genetics, and engineering to solve problems across diverse sectors like medicine, agriculture, and industry. Modern biotechnology is critical for developing new vaccines, enhancing crop resilience, producing sustainable biofuels, and cleaning up environmental pollutants.
+                </p>
+            </div>
+            
+            <h2 id="subfields-heading" class="text-3xl font-bold text-gray-800 border-b-2 border-gray-300 pb-3 mb-6">Key Sub-Fields</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="subfields-grid">
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-1-title" class="text-2xl font-semibold text-gray-900">Red Biotechnology (Medical)</h3>
+                    <p id="subfield-1-summary" class="mt-2 text-gray-600">
+                        Pertains to **healthcare and medical processes**. This includes the development of new antibiotics, gene therapy (CRISPR), molecular diagnostic tests, regenerative medicine (tissue engineering), and the production of biopharmaceuticals like insulin and vaccines.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-2-title" class="text-2xl font-semibold text-gray-900">White Biotechnology (Industrial)</h3>
+                    <p id="subfield-2-summary" class="mt-2 text-gray-600">
+                        Focuses on **industrial applications**, aiming for efficiency and sustainability. This involves using enzymes and microorganisms to produce chemicals, polymers (bioplastics), detergents, and biofuels, leading to cleaner, less energy-intensive manufacturing processes.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-3-title" class="text-2xl font-semibold text-gray-900">Green Biotechnology (Agricultural)</h3>
+                    <p id="subfield-3-summary" class="mt-2 text-gray-600">
+                        Applies biotechnology to **agriculture and food production**. This includes genetic modification of crops for enhanced resistance to pests and diseases, improving nutritional value, and developing sustainable, drought-resistant farming practices.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-4-title" class="text-2xl font-semibold text-gray-900">Blue Biotechnology (Marine)</h3>
+                    <p id="subfield-4-summary" class="mt-2 text-gray-600">
+                        Exploits the vast **marine resources**, such as algae and deep-sea microbes, to develop new products. Applications include novel medicines, cosmetics, enzymes for industrial use, and developing methods for cleaning up marine pollution.
+                    </p>
+                </div>
+                
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-5-title" class="text-2xl font-semibold text-gray-900">Bioinformatics</h3>
+                    <p id="subfield-5-summary" class="mt-2 text-gray-600">
+                        The intersection of **biology and computer science**. It involves developing and applying computational tools and algorithms to analyze large biological data sets, such as DNA sequencing data, enabling rapid genomic analysis and drug discovery.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg detail-card">
+                    <h3 id="subfield-6-title" class="text-2xl font-semibold text-gray-900">Genetic Engineering</h3>
+                    <p id="subfield-6-summary" class="mt-2 text-gray-600">
+                        The **direct manipulation of an organism's genes** using techniques like gene splicing. Its goals are to enhance or suppress specific traits, create transgenic organisms (GMOs), and correct genetic defects.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button onclick="goToHome()" id="back-btn-bottom" class="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition duration-200 shadow-md">Back to Home Page</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xl font-bold mb-4 logo-arabic-font">Be Mosharafa</h3>
+            <p class="text-sm text-gray-400">Biotechnology Exploration Page. &copy; 2025 Be Mosharafa.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Translation Data for Biotechnology Page ---
+        const translations = {
+            en: {
+                title: "Be Mosharafa | Biotechnology Field Details",
+                main_title: "Biotechnology",
+                subtitle: "Applied Life Science Field Details",
+                back_btn: "Back to Home Page",
+                summary_heading: "Field Summary",
+                
+                field_summary: "Biotechnology is the use of living systems, organisms, or derivatives thereof, to develop or create products and processes for specific uses. It integrates molecular biology, genetics, and engineering to solve problems across diverse sectors like medicine, agriculture, and industry. Modern biotechnology is critical for developing new vaccines, enhancing crop resilience, producing sustainable biofuels, and cleaning up environmental pollutants.",
+                
+                subfields_heading: "Key Sub-Fields",
+
+                subfield_1_title: "Red Biotechnology (Medical)",
+                subfield_1_summary: "Pertains to healthcare and medical processes. This includes the development of new antibiotics, gene therapy (CRISPR), molecular diagnostic tests, regenerative medicine (tissue engineering), and the production of biopharmaceuticals like insulin and vaccines.",
+                
+                subfield_2_title: "White Biotechnology (Industrial)",
+                subfield_2_summary: "Focuses on industrial applications, aiming for efficiency and sustainability. This involves using enzymes and microorganisms to produce chemicals, polymers (bioplastics), detergents, and biofuels, leading to cleaner, less energy-intensive manufacturing processes.",
+                
+                subfield_3_title: "Green Biotechnology (Agricultural)",
+                subfield_3_summary: "Applies biotechnology to agriculture and food production. This includes genetic modification of crops for enhanced resistance to pests and diseases, improving nutritional value, and developing sustainable, drought-resistant farming practices.",
+
+                subfield_4_title: "Blue Biotechnology (Marine)",
+                subfield_4_summary: "Exploits the vast marine resources, such as algae and deep-sea microbes, to develop new products. Applications include novel medicines, cosmetics, enzymes for industrial use, and developing methods for cleaning up marine pollution.",
+                
+                subfield_5_title: "Bioinformatics",
+                subfield_5_summary: "The intersection of biology and computer science. It involves developing and applying computational tools and algorithms to analyze large biological data sets, such as DNA sequencing data, enabling rapid genomic analysis and drug discovery.",
+
+                subfield_6_title: "Genetic Engineering",
+                subfield_6_summary: "The direct manipulation of an organism's genes using techniques like gene splicing. Its goals are to enhance or suppress specific traits, create transgenic organisms (GMOs), and correct genetic defects.",
+
+                lang_text: "العربية"
+            },
+            ar: {
+                title: "كُن مُشرفة | تفاصيل تخصص التكنولوجيا الحيوية",
+                main_title: "التكنولوجيا الحيوية",
+                subtitle: "تفاصيل مجال العلوم التطبيقية الحيوية",
+                back_btn: "العودة إلى الصفحة الرئيسية",
+                summary_heading: "ملخص التخصص",
+                
+                field_summary: "التكنولوجيا الحيوية هي استخدام الأنظمة الحية، الكائنات الحية، أو مشتقاتها، لتطوير أو إنشاء منتجات وعمليات لاستخدامات محددة. يدمج هذا المجال علم الأحياء الجزيئي والوراثة والهندسة لحل المشكلات عبر قطاعات متنوعة مثل الطب والزراعة والصناعة. تعد التكنولوجيا الحيوية الحديثة حاسمة لتطوير لقاحات جديدة، وتعزيز مرونة المحاصيل، وإنتاج وقود حيوي مستدام، وتنظيف الملوثات البيئية.",
+                
+                subfields_heading: "التخصصات الفرعية الرئيسية",
+
+                subfield_1_title: "التكنولوجيا الحيوية الحمراء (الطبية)",
+                subfield_1_summary: "تتعلق بالرعاية الصحية والعمليات الطبية. يشمل ذلك تطوير مضادات حيوية جديدة، العلاج الجيني (CRISPR)، اختبارات التشخيص الجزيئي، الطب التجديدي (هندسة الأنسجة)، وإنتاج المستحضرات الصيدلانية الحيوية مثل الأنسولين واللقاحات.",
+                
+                subfield_2_title: "التكنولوجيا الحيوية البيضاء (الصناعية)",
+                subfield_2_summary: "تركز على التطبيقات الصناعية، بهدف تحقيق الكفاءة والاستدامة. يتضمن ذلك استخدام الإنزيمات والكائنات الدقيقة لإنتاج المواد الكيميائية والبوليمرات (البلاستيك الحيوي) والمنظفات والوقود الحيوي، مما يؤدي إلى عمليات تصنيع أنظف وأقل استهلاكاً للطاقة.",
+                
+                subfield_3_title: "التكنولوجيا الحيوية الخضراء (الزراعية)",
+                subfield_3_summary: "تطبق التكنولوجيا الحيوية على الزراعة وإنتاج الغذاء. يشمل ذلك التعديل الوراثي للمحاصيل لتعزيز مقاومتها للآفات والأمراض، وتحسين القيمة الغذائية، وتطوير ممارسات زراعية مستدامة ومقاومة للجفاف.",
+
+                subfield_4_title: "التكنولوجيا الحيوية الزرقاء (البحرية)",
+                subfield_4_summary: "تستغل الموارد البحرية الهائلة، مثل الطحالب والميكروبات في أعماق البحار، لتطوير منتجات جديدة. تشمل التطبيقات الأدوية الجديدة، ومستحضرات التجميل، والإنزيمات للاستخدام الصناعي، وتطوير طرق لتنظيف التلوث البحري.",
+                
+                subfield_5_title: "المعلوماتية الحيوية",
+                subfield_5_summary: "نقطة التقاء علم الأحياء وعلوم الحاسب. تتضمن تطوير وتطبيق الأدوات والخوارزميات الحاسوبية لتحليل مجموعات البيانات البيولوجية الكبيرة، مثل بيانات تسلسل الحمض النووي، مما يتيح التحليل الجيني السريع واكتشاف الأدوية.",
+
+                subfield_6_title: "الهندسة الوراثية",
+                subfield_6_summary: "التلاعب المباشر بجينات الكائن الحي باستخدام تقنيات مثل قص الجينات. أهدافها هي تعزيز أو قمع سمات محددة، وإنشاء كائنات معدلة وراثياً (GMOs)، وتصحيح العيوب الوراثية.",
+
+                lang_text: "English"
+            }
+        };
+
+        let currentLang = 'en';
+
+        // --- Core Functions ---
+        // This function explicitly sends the user back to the assumed home file (index.html)
+        function goToHome() {
+            // NOTE: Replace 'index.html' with the actual filename of your main home page if it is different.
+            window.location.href = 'be_mosharafa.html'; 
+        }
+
+        // Initialize language settings on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            currentLang = 'en';
+            applyTranslations('en');
+        });
+
+        function applyTranslations(lang) {
+            const data = translations[lang];
+            const htmlTag = document.documentElement;
+            const body = document.body;
+
+            // Set global direction and font
+            htmlTag.lang = lang;
+            htmlTag.dir = (lang === 'ar' ? 'rtl' : 'ltr');
+            
+            if (lang === 'ar') {
+                body.classList.add('font-arabic');
+                body.classList.add('rtl');
+            } else {
+                body.classList.remove('font-arabic');
+                body.classList.remove('rtl');
+            }
+            
+            // Apply text translations
+            document.title = data.title;
+            document.getElementById('lang-text').textContent = data.lang_text;
+            
+            // Apply text to the two back buttons
+            document.getElementById('back-btn-nav').textContent = data.back_btn;
+            document.getElementById('back-btn-bottom').textContent = data.back_btn;
+
+            document.getElementById('main-title').textContent = data.main_title;
+            document.getElementById('page-subtitle').textContent = data.subtitle;
+            document.getElementById('summary-heading').textContent = data.summary_heading;
+            document.getElementById('field-summary').textContent = data.field_summary;
+            document.getElementById('subfields-heading').textContent = data.subfields_heading;
+
+            // Sub-field translations (6 fields)
+            document.getElementById('subfield-1-title').textContent = data.subfield_1_title;
+            document.getElementById('subfield-1-summary').textContent = data.subfield_1_summary;
+            document.getElementById('subfield-2-title').textContent = data.subfield_2_title;
+            document.getElementById('subfield-2-summary').textContent = data.subfield_2_summary;
+            document.getElementById('subfield-3-title').textContent = data.subfield_3_title;
+            document.getElementById('subfield-3-summary').textContent = data.subfield_3_summary;
+            document.getElementById('subfield-4-title').textContent = data.subfield_4_title;
+            document.getElementById('subfield-4-summary').textContent = data.subfield_4_summary;
+            document.getElementById('subfield-5-title').textContent = data.subfield_5_title;
+            document.getElementById('subfield-5-summary').textContent = data.subfield_5_summary;
+            document.getElementById('subfield-6-title').textContent = data.subfield_6_title;
+            document.getElementById('subfield-6-summary').textContent = data.subfield_6_summary;
+            
+            currentLang = lang;
+        }
+
+        function toggleLanguage() {
+            const newLang = (currentLang === 'en' ? 'ar' : 'en');
+            applyTranslations(newLang);
+        }
+    </script>
+</body>
+</html>

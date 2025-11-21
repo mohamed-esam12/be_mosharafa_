@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Be Mosharafa | Fields of Science Exploration</title>
+    <link rel="icon" type="image/png" href="be_mosharafa.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cairo:wght@400;600;700&family=Rakkas&display=swap" rel="stylesheet">
+    
+    <style>
+        /* BASE STYLES */
+        body { font-family: 'Inter', sans-serif; }
+        body.font-arabic { font-family: 'Cairo', sans-serif; }
+        .logo-arabic-font { font-family: 'Rakkas', cursive; }
+        
+        /* --- PROFESSIONAL UI/UX TWEAKS --- */
+
+        /* Sticky Header Shadow on Scroll: Uses Tailwind's shadow for a clean transition */
+        .scrolled-nav {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        /* Subtle Hover Effect for Cards (Shadow increase + slight scale for a "lift" effect) */
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Hover for Buttons/Links */
+        .animation-hover-scale { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .animation-hover-scale:hover { transform: scale(1.02); }
+
+        /* Animation for element entry */
+        .fade-in { animation: fadeIn 0.7s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Ensure smooth scrolling when clicking hash links */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <nav id="navbar" class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="be_mosharafa.png" alt="Be Mosharafa Logo" class="h-10 w-auto me-2">
+                    <span id="brand-name" class="font-bold text-xl tracking-tight text-gray-900" data-i18n="brand">Be Mosharafa</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
+                    <a href="#home" class="text-gray-600 hover:text-black transition duration-200 font-medium" data-i18n="nav_home">Home</a>
+                    <a href="#fields" class="text-gray-600 hover:text-black transition duration-200 font-medium" data-i18n="nav_courses">Fields</a>
+                    <a href="#features" class="text-gray-600 hover:text-black transition duration-200 font-medium" data-i18n="nav_why">Why Us</a>
+                    
+                    <button onclick="toggleLanguage()" class="flex items-center text-gray-600 hover:text-black border border-gray-300 px-3 py-1 rounded-md text-sm transition hover:bg-gray-100 animation-hover-scale">
+                        <i class="fa-solid fa-globe me-2 text-gray-500"></i>
+                        <span id="lang-text" class="font-medium">العربية</span>
+                    </button>
+
+                    <a href="#contact" class="bg-black text-white px-5 py-2 rounded-lg font-semibold hover:bg-gray-800 transition duration-200 shadow-lg animation-hover-scale" data-i18n="nav_join">Join Now</a>
+                </div>
+
+                <div class="md:hidden flex items-center space-x-4 rtl:space-x-reverse">
+                    <button onclick="toggleLanguage()" class="text-gray-600 hover:text-black border border-gray-300 px-2 py-1 rounded text-xs animation-hover-scale">
+                        <i class="fa-solid fa-globe"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-black focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t text-start">
+            <a href="#home" class="block px-4 py-2 text-gray-600 hover:bg-gray-100" data-i18n="nav_home">Home</a>
+            <a href="#fields" class="block px-4 py-2 text-gray-600 hover:bg-gray-100" data-i18n="nav_courses">Fields</a>
+            <a href="#features" class="block px-4 py-2 text-gray-600 hover:bg-gray-100" data-i18n="nav_why">Why Us</a>
+            <a href="#contact" class="block px-4 py-2 text-black font-bold hover:bg-gray-100" data-i18n="nav_join">Join Now</a>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-24 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 fade-in text-start md:text-left">
+                <h1 class="text-4xl md:text-6xl font-extrabold mt-4 leading-tight" data-i18n="hero_title">Explore the Foundations of Human Knowledge</h1>
+                <p class="mt-4 text-xl text-gray-400 font-light" data-i18n="hero_desc">Dive into the twelve core disciplines of science, from the cosmos (Astronomy) to the fundamental building blocks of life (Biology).</p>
+                <div class="mt-8 flex space-x-4 rtl:space-x-reverse">
+                    <a href="#fields" class="bg-white text-gray-900 px-8 py-3 rounded-lg font-bold shadow-xl hover:bg-gray-200 transition duration-200 animation-hover-scale" data-i18n="hero_btn1">View All Fields</a>
+                    <a href="#features" class="border border-gray-500 text-gray-300 px-8 py-3 rounded-lg font-bold hover:bg-gray-800 transition duration-200 animation-hover-scale" data-i18n="hero_btn2">Learn More</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center fade-in">
+                <div class="w-full max-w-lg bg-gray-700 rounded-xl shadow-2xl p-6 border-4 border-gray-600">
+                    <div class="w-full h-64 bg-gray-900 rounded-lg flex items-center justify-center cursor-pointer hover:opacity-90 transition">
+                        <i class="fa-solid fa-play text-5xl text-white opacity-80"></i>
+                    </div>
+                    <div class="mt-4 text-center text-gray-400 text-sm font-mono" data-i18n="video_caption">ABOUT US.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fields" class="py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-gray-900" data-i18n="courses_title">Explore the Core Fields of Science</h2>
+                <p class="mt-4 text-xl text-gray-600" data-i18n="courses_subtitle">A summary of the 12 foundational and modern scientific disciplines.</p>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-800 border-b-2 border-gray-300 pb-3 mb-6" data-i18n="group_physical">Physical Sciences 🌌</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="group-physical">
+                    
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-24 bg-gray-900 flex flex-col items-center justify-center text-white p-4">
+                            <i class="fa-solid fa-galaxy text-4xl opacity-80"></i>
+                        </div>
+                        <div class="p-6 text-start">
+                            <span class="text-xs font-bold text-sky-700 bg-sky-200 px-3 py-1 rounded-full uppercase" data-i18n="cat_space">Cosmic Study</span>
+                            <h3 class="text-xl font-bold mb-2 mt-3" data-i18n="field_1_title">Astronomy</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-i18n="field_1_desc">The study of celestial objects, space, and the universe as a whole, including its origin and evolution.</p>
+                            <div class="flex items-center justify-end border-t border-gray-200 pt-4">
+                                <button onclick="openFieldPage('astronomy_details.html')" class="text-black font-bold text-sm hover:underline" data-i18n="summary_btn">Read Summary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-24 bg-gray-900 flex flex-col items-center justify-center text-white p-4">
+                            <i class="fa-solid fa-atom text-4xl opacity-80"></i>
+                        </div>
+                        <div class="p-6 text-start">
+                            <span class="text-xs font-bold text-orange-700 bg-orange-200 px-3 py-1 rounded-full uppercase" data-i18n="cat_matter">Core Science</span>
+                            <h3 class="text-xl font-bold mb-2 mt-3" data-i18n="field_2_title">Physics</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-i18n="field_2_desc">The natural science that studies matter, its motion and behavior through space and time, and the related entities of energy and force.</p>
+                            <div class="flex items-center justify-end border-t border-gray-200 pt-4">
+                                <button onclick="openFieldPage('physics_details.html')" class="text-black font-bold text-sm hover:underline" data-i18n="summary_btn">Read Summary</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-24 bg-gray-900 flex flex-col items-center justify-center text-white p-4">
+                            <i class="fa-solid fa-flask text-4xl opacity-80"></i>
+                        </div>
+                        <div class="p-6 text-start">
+                            <span class="text-xs font-bold text-green-700 bg-green-200 px-3 py-1 rounded-full uppercase" data-i18n="cat_matter">Core Science</span>
+                            <h3 class="text-xl font-bold mb-2 mt-3" data-i18n="field_3_title">Chemistry</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-i18n="field_3_desc">The science of the composition, structure, properties, and reactions of matter, including its atoms and molecules.</p>
+                            <div class="flex items-center justify-end border-t border-gray-200 pt-4">
+                                <button onclick="openFieldPage('chemistry_details.html')" class="text-black font-bold text-sm hover:underline" data-i18n="summary_btn">Read Summary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-24 bg-gray-900 flex flex-col items-center justify-center text-white p-4">
+                            <i class="fa-solid fa-shield-virus text-4xl opacity-80"></i>
+                        </div>
+                        <div class="p-6 text-start">
+                            <span class="text-xs font-bold text-pink-700 bg-pink-200 px-3 py-1 rounded-full uppercase" data-i18n="cat_inter">Interdisciplinary</span>
+                            <h3 class="text-xl font-bold mb-2 mt-3" data-i18n="field_10_title">Biophysics</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-i18n="field_10_desc">The interdisciplinary science that applies the theories and methods of physics to study biological systems and problems.</p>
+                            <div class="flex items-center justify-end border-t border-gray-200 pt-4">
+                                <button onclick="openFieldPage('biophysics_details.html')" class="text-black font-bold text-sm hover:underline" data-i18n="summary_btn">Read Summary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-800 border-b-2 border-gray-300 pb-3 mb-6" data-i18n="group_life">Life Sciences 🧬</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="group-life">
+                    
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-24 bg-gray-900 flex flex-col items-center justify-center text-white p-4">
+                            <i class="fa-solid fa-dna text-4xl opacity-80"></i>
+                        </div>
+                        <div class="p-6 text-start">
+                            <span class="text-xs font-bold text-purple-700 bg-purple-200 px-3 py-1 rounded-full uppercase" data-i18n="cat_life">Core Life Science</span>
+                            <h3 class="text-xl font-bold mb-2 mt-3" data-i18n="field_6_title">Biology</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-i18n="field_6_desc">The study of life and living organisms, including their physical structure, chemical processes, molecular interactions, physiological mechanisms, development, and evolution.</p>
+                            <div class="flex items-center justify-end border-t border-gray-200 pt-4">
+                                <button onclick="openFieldPage('biology_details.html')" class="text-black font-bold text-sm hover:underline" data-i18n="summary_btn">Read Summary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-24 bg-gray-900 flex flex-col items-center justify-center text-white p-4">
+                            <i class="fa-solid fa-paw text-4xl opacity-80"></i>
+                        </div>
+                        <div class="p-6 text-start">
+                            <span class="text-xs font-bold text-red-700 bg-red-200 px-3 py-1 rounded-full uppercase" data-i18n="cat_life_specialized">Animal Study</span>
+                            <h3 class="text-xl font-bold mb-2 mt-3" data-i18n="field_4_title">Zoology</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-i18n="field_4_desc">The biological study of the animal kingdom, including the structure, embryology, evolution, classification, habits, and distribution of all animals, both living and extinct.</p>
+                            <div class="flex items-center justify-end border-t border-gray-200 pt-4">
+                                <button onclick="openFieldPage('zoology_details.html')" class="text-black font-bold text-sm hover:underline" data-i18n="summary_btn">Read Summary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-24 bg-gray-900 flex flex-col items-center justify-center text-white p-4">
+                            <i class="fa-solid fa-seedling text-4xl opacity-80"></i>
+                        </div>
+                        <div class="p-6 text-start">
+                            <span class="text-xs font-bold text-green-700 bg-green-200 px-3 py-1 rounded-full uppercase" data-i18n="cat_life_specialized">Plant Study</span>
+                            <h3 class="text-xl font-bold mb-2 mt-3" data-i18n="field_5_title">Botany</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-i18n="field_5_desc">The scientific study of plants, including their structure, properties, and biochemical processes, as well as the classification of and relationships among plant groups.</p>
+                            <div class="flex items-center justify-end border-t border-gray-200 pt-4">
+                                <button onclick="openFieldPage('botany_details.html')" class="text-black font-bold text-sm hover:underline" data-i18n="summary_btn">Read Summary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-24 bg-gray-900 flex flex-col items-center justify-center text-white p-4">
+                            <i class="fa-solid fa-microscope text-4xl opacity-80"></i>
+                        </div>
+                        <div class="p-6 text-start">
+                            <span class="text-xs font-bold text-teal-700 bg-teal-200 px-3 py-1 rounded-full uppercase" data-i18n="cat_applied">Applied Science</span>
+                            <h3 class="text-xl font-bold mb-2 mt-3" data-i18n="field_7_title">Biotechnology</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-i18n="field_7_desc">The use of living systems and organisms to develop or make products, or any technological application that uses biological systems.</p>
+                            <div class="flex items-center justify-end border-t border-gray-200 pt-4">
+                                <button onclick="openFieldPage('biotechnology_details.html')" class="text-black font-bold text-sm hover:underline" data-i18n="summary_btn">Read Summary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold text-gray-800 border-b-2 border-gray-300 pb-3 mb-6" data-i18n="group_formal_earth">Formal & Earth Sciences 💻⛰️</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="group-formal-earth">
+                    
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-24 bg-gray-900 flex flex-col items-center justify-center text-white p-4">
+                            <i class="fa-solid fa-calculator text-4xl opacity-80"></i>
+                        </div>
+                        <div class="p-6 text-start">
+                            <span class="text-xs font-bold text-yellow-700 bg-yellow-200 px-3 py-1 rounded-full uppercase" data-i18n="cat_formal">Formal Science</span>
+                            <h3 class="text-xl font-bold mb-2 mt-3" data-i18n="field_8_title">Mathematics</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-i18n="field_8_desc">The study of quantity, structure, space, and change. It is the language of science and a fundamental discipline for analysis.</p>
+                            <div class="flex items-center justify-end border-t border-gray-200 pt-4">
+                                <button onclick="openFieldPage('mathematics_details.html')" class="text-black font-bold text-sm hover:underline" data-i18n="summary_btn">Read Summary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-24 bg-gray-900 flex flex-col items-center justify-center text-white p-4">
+                            <i class="fa-solid fa-laptop-code text-4xl opacity-80"></i>
+                        </div>
+                        <div class="p-6 text-start">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-200 px-3 py-1 rounded-full uppercase" data-i18n="cat_formal">Formal Science</span>
+                            <h3 class="text-xl font-bold mb-2 mt-3" data-i18n="field_9_title">Computer Science</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-i18n="field_9_desc">The study of computation, automation, and information, including theoretical foundations and algorithmic thinking.</p>
+                            <div class="flex items-center justify-end border-t border-gray-200 pt-4">
+                                <button onclick="openFieldPage('computer_science_details.html')" class="text-black font-bold text-sm hover:underline" data-i18n="summary_btn">Read Summary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-24 bg-gray-900 flex flex-col items-center justify-center text-white p-4">
+                            <i class="fa-solid fa-mountain text-4xl opacity-80"></i>
+                        </div>
+                        <div class="p-6 text-start">
+                            <span class="text-xs font-bold text-amber-700 bg-amber-200 px-3 py-1 rounded-full uppercase" data-i18n="cat_earth">Earth Science</span>
+                            <h3 class="text-xl font-bold mb-2 mt-3" data-i18n="field_11_title">Geology</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-i18n="field_11_desc">The study of the Earth, the materials of which it is made, the structure of those materials, and the processes acting upon them.</p>
+                            <div class="flex items-center justify-end border-t border-gray-200 pt-4">
+                                <button onclick="openFieldPage('geology_details.html')" class="text-black font-bold text-sm hover:underline" data-i18n="summary_btn">Read Summary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-24 bg-gray-900 flex flex-col items-center justify-center text-white p-4">
+                            <i class="fa-solid fa-globe-africa text-4xl opacity-80"></i>
+                        </div>
+                        <div class="p-6 text-start">
+                            <span class="text-xs font-bold text-cyan-700 bg-cyan-200 px-3 py-1 rounded-full uppercase" data-i18n="cat_earth">Earth Science</span>
+                            <h3 class="text-xl font-bold mb-2 mt-3" data-i18n="field_12_title">Geophysics</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-i18n="field_12_desc">The study of the physical Earth and its environment, using principles of physics, including the Earth's interior, magnetic field, and seismology.</p>
+                            <div class="flex items-center justify-end border-t border-gray-200 pt-4">
+                                <button onclick="openFieldPage('geophysics_details.html')" class="text-black font-bold text-sm hover:underline" data-i18n="summary_btn">Read Summary</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-16" id="contact">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-y-12 md:gap-x-8 text-start">
+                
+                <div class="col-span-2">
+                    <h3 class="text-xl font-bold mb-4">
+                        <img src="be_mosharafa.png" alt="Be Mosharafa Logo" class="h-8 w-auto inline-block me-2">
+                        <span id="brand-name-footer" class="font-bold text-xl tracking-tight text-white" data-i18n="brand">Be Mosharafa</span>
+                    </h3>
+                    <p class="text-gray-400 text-sm mt-4" data-i18n="footer_desc">Empowering learners worldwide with accessible, high-quality education. Built by scientists, for future scientists.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 uppercase tracking-wider text-gray-300" data-i18n="footer_links">Platform</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition duration-200" data-i18n="nav_home">Home</a></li>
+                        <li><a href="#fields" class="hover:text-white transition duration-200" data-i18n="nav_courses">Fields</a></li>
+                        <li><a href="#features" class="hover:text-white transition duration-200" data-i18n="nav_why">Why Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 uppercase tracking-wider text-gray-300" data-i18n="footer_fields1">Physical Sciences</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><button onclick="openFieldPage('astronomy_details.html')" class="hover:text-white transition duration-200" data-i18n="field_1_title">Astronomy</button></li>
+                        <li><button onclick="openFieldPage('physics_details.html')" class="hover:text-white transition duration-200" data-i18n="field_2_title">Physics</button></li>
+                        <li><button onclick="openFieldPage('chemistry_details.html')" class="hover:text-white transition duration-200" data-i18n="field_3_title">Chemistry</button></li>
+                        <li><button onclick="openFieldPage('biophysics_details.html')" class="hover:text-white transition duration-200" data-i18n="field_10_title">Biophysics</button></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4 uppercase tracking-wider text-gray-300" data-i18n="footer_fields2">Life Sciences</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><button onclick="openFieldPage('biology_details.html')" class="hover:text-white transition duration-200" data-i18n="field_6_title">Biology</button></li>
+                        <li><button onclick="openFieldPage('zoology_details.html')" class="hover:text-white transition duration-200" data-i18n="field_4_title">Zoology</button></li>
+                        <li><button onclick="openFieldPage('botany_details.html')" class="hover:text-white transition duration-200" data-i18n="field_5_title">Botany</button></li>
+                        <li><button onclick="openFieldPage('biotechnology_details.html')" class="hover:text-white transition duration-200" data-i18n="field_7_title">Biotechnology</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 uppercase tracking-wider text-gray-300" data-i18n="footer_fields3">Formal & Earth</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><button onclick="openFieldPage('mathematics_details.html')" class="hover:text-white transition duration-200" data-i18n="field_8_title">Mathematics</button></li>
+                        <li><button onclick="openFieldPage('computer_science_details.html')" class="hover:text-white transition duration-200" data-i18n="field_9_title">Computer Science</button></li>
+                        <li><button onclick="openFieldPage('geology_details.html')" class="hover:text-white transition duration-200" data-i18n="field_11_title">Geology</button></li>
+                        <li><button onclick="openFieldPage('geophysics_details.html')" class="hover:text-white transition duration-200" data-i18n="field_12_title">Geophysics</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 uppercase tracking-wider text-gray-300" data-i18n="footer_contact">Contact</h4>
+                    <p class="text-sm text-gray-400 space-y-3">
+                        <span class="block"><i class="fa-solid fa-envelope me-2"></i>support@bemosharafa.com</span>
+                        <span class="block"><i class="fa-solid fa-location-dot me-2"></i>Faculty of Science, Cairo University</span>
+                    </p>
+                </div>
+
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-sm text-gray-400 font-mono">
+                &copy; 2025 Be Mosharafa. Built with passion and code.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Navigation Function ---
+        function openFieldPage(fileName) {
+            // This navigates the current window to the specific HTML file.
+            window.location.href = fileName;
+        }
+
+        // Translation Data (Only the structure is shown for brevity, assuming full data exists)
+        const translations = {
+            en: {
+                page_title: "Be Mosharafa | Fields of Science Exploration", brand: "Be Mosharafa", nav_home: "Home", nav_courses: "Fields", nav_why: "Why Us", nav_join: "Join Now", hero_title: "Explore the Foundations of Human Knowledge", hero_desc: "Dive into the twelve core disciplines of science, from the cosmos (Astronomy) to the fundamental building blocks of life (Biology).", hero_btn1: "View All Fields", hero_btn2: "Learn More", courses_title: "Explore the Core Fields of Science", courses_subtitle: "A summary of the 12 foundational and modern scientific disciplines.", summary_btn: "Read Summary", group_physical: "Physical Sciences 🌌", group_life: "Life Sciences 🧬", group_formal_earth: "Formal & Earth Sciences 💻⛰️", cat_space: "Cosmic Study", cat_matter: "Core Physics/Chem", cat_life: "Core Life Science", cat_life_specialized: "Specialized Biology", cat_applied: "Applied Science", cat_formal: "Formal Science", cat_earth: "Geoscience", cat_inter: "Interdisciplinary", field_1_title: "Astronomy", field_1_desc: "The study of celestial objects, space, and the universe as a whole, including its origin and evolution.", field_2_title: "Physics", field_2_desc: "The natural science that studies matter, its motion and behavior through space and time, and the related entities of energy and force.", field_3_title: "Chemistry", field_3_desc: "The science of the composition, structure, properties, and reactions of matter, including its atoms and molecules.", field_4_title: "Zoology", field_4_desc: "The biological study of the animal kingdom, including the structure, embryology, evolution, classification, habits, and distribution of all animals, both living and extinct.", field_5_title: "Botany", field_5_desc: "The scientific study of plants, including their structure, properties, and biochemical processes, as well as the classification of and relationships among plant groups.", field_6_title: "Biology", field_6_desc: "The study of life and living organisms, including their physical structure, chemical processes, molecular interactions, physiological mechanisms, development, and evolution.", field_7_title: "Biotechnology", field_7_desc: "The use of living systems and organisms to develop or make products, or any technological application that uses biological systems.", field_8_title: "Mathematics", field_8_desc: "The study of quantity, structure, space, and change. It is the language of science and a fundamental discipline for analysis.", field_9_title: "Computer Science", field_9_desc: "The study of computation, automation, and information, including theoretical foundations and algorithmic thinking.", field_10_title: "Biophysics", field_10_desc: "The interdisciplinary science that applies the theories and methods of physics to study biological systems and problems.", field_11_title: "Geology", field_11_desc: "The study of the Earth, the materials of which it is made, the structure of those materials, and the processes acting upon them.", field_12_title: "Geophysics", field_12_desc: "The study of the physical Earth and its environment, using principles of physics, including the Earth's interior, magnetic field, and seismology.", footer_desc: "Empowering learners worldwide with accessible, high-quality education. Built by scientists, for future scientists.", footer_links: "Platform", footer_fields1: "Physical Sciences", footer_fields2: "Life Sciences", footer_fields3: "Formal & Earth", footer_contact: "Contact", video_caption: "WHO ARE WE.",
+            },
+            ar: {
+                page_title: "كُن مُشرفة | استكشاف مجالات العلوم", brand: "كُنْ مُشرفة", nav_home: "الرئيسية", nav_courses: "المجالات", nav_why: "لماذا نحن", nav_join: "انضم الآن", hero_title: "اكتشف أسس المعرفة البشرية", hero_desc: "انغمس في التخصصات الأساسية الاثني عشر للعلوم، من الكون (الفلك) إلى اللبنات الأساسية للحياة (البيولوجيا).", hero_btn1: "عرض جميع المجالات", hero_btn2: "اعرف المزيد", courses_title: "استكشف المجالات الأساسية للعلوم", courses_subtitle: "ملخص لأهم ١٢ تخصصاً علمياً أساسياً وحديثاً.", summary_btn: "قراءة الملخص", group_physical: "العلوم الفيزيائية 🌌", group_life: "علوم الحياة 🧬", group_formal_earth: "العلوم الصورية والأرضية 💻⛰️", cat_space: "دراسات كونية", cat_matter: "فيزياء/كيمياء أساسية", cat_life: "علوم الحياة الأساسية", cat_life_specialized: "بيولوجيا متخصصة", cat_applied: "علوم تطبيقية", cat_formal: "علوم صورية", cat_earth: "علوم الأرض", cat_inter: "تخصصات متعددة", field_1_title: "الفلك (Astronomy)", field_1_desc: "دراسة الأجرام السماوية، الفضاء، والكون ككل، بما في ذلك أصله وتطوره.", field_2_title: "الفيزياء (Physics)", field_2_desc: "العلم الطبيعي الذي يدرس المادة وحركتها وسلوكها عبر المكان والزمان، والكيانات ذات الصلة بالطاقة والقوة.", field_3_title: "الكيمياء (Chemistry)", field_3_desc: "علم تكوين المادة، تركيبها، خصائصها، وتفاعلاتها، بما في ذلك الذرات والجزيئات.", field_4_title: "علم الحيوان (Zoology)", field_4_desc: "الدراسة البيولوجية للمملكة الحيوانية، بما في ذلك بنية جميع الحيوانات، سواء الحية أو المنقرضة، وتطورها وتصنيفها وعاداتها.", field_5_title: "علم النبات (Botany)", field_5_desc: "الدراسة العلمية للنباتات، بما في ذلك بنيتها، خصائصها، وعملياتها الكيميائية الحيوية، وتصنيف مجموعات النباتات.", field_6_title: "الأحياء (Biology)", field_6_desc: "دراسة الحياة والكائنات الحية، بما في ذلك تركيبها الفيزيائي، وعملياتها الكيميائية، وتفاعلاتها الجزيئية، وآلياتها الفسيولوجية، وتطورها.", field_7_title: "التكنولوجيا الحيوية (Biotechnology)", field_7_desc: "استخدام الأنظمة والكائنات الحية لتطوير أو صنع منتجات، أو أي تطبيق تكنولوجي يستخدم النظم البيولوجية.", field_8_title: "الرياضيات (Mathematics)", field_8_desc: "دراسة الكمية، البنية، الفضاء، والتغير. هي لغة العلوم وتخصص أساسي للتحليل.", field_9_title: "علوم الحاسب (Computer Science)", field_9_desc: "دراسة الحوسبة، والأتمتة، والمعلومات، بما في ذلك الأسس النظرية والتفكير الخوارزمي.", field_10_title: "الفيزياء الحيوية (Biophysics)", field_10_desc: "العلم المتعدد التخصصات الذي يطبق نظريات ومنهجيات الفيزياء لدراسة الأنظمة والمشكلات البيولوجية.", field_11_title: "الجيولوجيا (Geology)", field_11_desc: "دراسة الأرض، والمواد التي تتكون منها، وبنية تلك المواد، والعمليات المؤثرة عليها.", field_12_title: "الجيوفيزياء (Geophysics)", field_12_desc: "دراسة الأرض المادية وبيئتها، باستخدام مبادئ الفيزياء، بما في ذلك باطن الأرض، والمجال المغناطيسي، وعلم الزلازل.", footer_desc: "تمكين المتعلمين في جميع أنحاء العالم من خلال تعليم عالي الجودة. تم بناؤه بواسطة العلماء، لعلماء المستقبل.", footer_links: "المنصة", footer_fields1: "العلوم الفيزيائية", footer_fields2: "علوم الحياة", footer_fields3: "الصور ية والأرضية", footer_contact: "اتصل بنا", video_caption: "من نحن.",
+            }
+        };
+        
+        let currentLang = 'en';
+
+        // --- Core Functions ---
+
+        function setupNavigation() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const navbar = document.getElementById('navbar');
+
+            // 1. Mobile Menu Toggle
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // 2. Sticky Shadow Effect
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled-nav');
+                    navbar.classList.remove('shadow-sm');
+                } else {
+                    navbar.classList.remove('scrolled-nav');
+                    navbar.classList.add('shadow-sm');
+                }
+            });
+
+            // 3. Smooth Scroll Listener (Only for internal anchors)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href').substring(1);
+                    if (document.getElementById(targetId) || targetId === 'home' || targetId === 'fields' || targetId === 'features' || targetId === 'contact') {
+                        e.preventDefault();
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        }
+        
+        function toggleLanguage() {
+            const htmlTag = document.documentElement;
+            const langText = document.getElementById('lang-text');
+            const body = document.body;
+            
+            const brandHeader = document.getElementById('brand-name');
+            const brandFooter = document.getElementById('brand-name-footer');
+            
+            if (currentLang === 'en') {
+                currentLang = 'ar';
+                htmlTag.lang = 'ar';
+                htmlTag.dir = 'rtl';
+                langText.textContent = "English"; 
+                body.classList.add('font-arabic');
+                brandHeader.classList.add('logo-arabic-font');
+                brandFooter.classList.add('logo-arabic-font');
+            } else {
+                currentLang = 'en';
+                htmlTag.lang = 'en';
+                htmlTag.dir = 'ltr';
+                langText.textContent = "العربية";
+                body.classList.remove('font-arabic');
+                brandHeader.classList.remove('logo-arabic-font');
+                brandFooter.classList.remove('logo-arabic-font');
+            }
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+            document.title = translations[currentLang]['page_title'];
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setupNavigation();
+            // Initialize to 'en' by setting currentLang to 'ar' and immediately calling toggleLanguage
+            currentLang = 'ar'; 
+            toggleLanguage(); 
+        });
+    </script>
+</body>
+</html>
